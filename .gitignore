@@ -1,0 +1,21 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# mrgsolve build artifacts
+*.so
+*.o
+*.dll
+mrgsolve-*/
+
+# shinylive build output (produced in CI)
+build/
+site/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
