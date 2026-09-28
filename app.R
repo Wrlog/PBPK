@@ -89,8 +89,8 @@ ui <- dashboardPage(
       tags$h4("Dosing regimen", style = "font-size: 15px; margin-top: 10px;"),
       radioButtons("route", NULL, choices = ROUTES, selected = "oral", inline = TRUE),
       fluidRow(
-        column(7, numericInput("dose", "Dose", value = 7.5, min = 0, step = 0.5)),
-        column(5, selectInput("dose_basis", "Unit", choices = c("mg" = "flat", "mg/kg" = "mgkg")))
+        column(6, numericInput("dose", "Dose", value = 7.5, min = 0, step = 0.5)),
+        column(6, selectInput("dose_basis", "Unit", choices = c("mg" = "flat", "mg/kg" = "mgkg"), selectize = FALSE))
       ),
       fluidRow(
         column(6, numericInput("interval", "Interval (h)", value = 24, min = 0.5, step = 1)),
@@ -472,15 +472,21 @@ server <- function(input, output, session) {
       floor_c <- max(d$med, na.rm = TRUE) * 1e-6
       d[, -1] <- lapply(d[, -1], function(v) ifelse(v > floor_c, v, NA))
     }
-    p <- ggplot(d, aes(x = time)) +
+    # For a single dose the window is the whole simulation, so there's
+    # nothing to mark.
+    shade <- if (s$reg$n_doses > 1) {
       annotate("rect", xmin = win[1], xmax = win[2], ymin = -Inf, ymax = Inf,
-               fill = PAL$sunken, colour = NA) +
+               fill = PAL$sunken, colour = NA)
+    }
+    p <- ggplot(d, aes(x = time)) +
+      shade +
       geom_ribbon(aes(ymin = q05, ymax = q95), fill = PAL$blue, alpha = 0.14, na.rm = TRUE) +
       geom_ribbon(aes(ymin = q25, ymax = q75), fill = PAL$blue, alpha = 0.28, na.rm = TRUE) +
       geom_line(aes(y = med), colour = PAL$blue_ink, linewidth = 1.1, na.rm = TRUE) +
       labs(x = "Time (h)", y = "Plasma concentration (mg/L)",
            title = sprintf("%s, %s", DRUGS[[input$drug]]$label, names(ROUTES)[ROUTES == input$route]),
-           subtitle = "Median with 50% and 90% prediction intervals. The shaded band is the assessment window.") +
+           subtitle = paste0("Median with 50% and 90% prediction intervals.",
+                             if (s$reg$n_doses > 1) " The shaded band is the assessment window." else "")) +
       scale_x_continuous(breaks = scales::pretty_breaks(10), expand = expansion(c(0, 0.02))) +
       theme_sim()
     if (log_y) p + scale_y_log10(labels = plain_number) else p + scale_y_continuous(limits = c(0, NA), expand = expansion(c(0, 0.05)))

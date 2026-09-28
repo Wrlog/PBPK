@@ -142,6 +142,16 @@ app_css <- sprintf("
     background: var(--surface); color: var(--ink);
   }
   .box.box-solid, .box.box-primary { border-top-color: var(--rule); }
+  /* shinydashboard colours solid headers with three-class selectors, so the
+     override needs the same specificity to win. */
+  .box.box-solid.box-primary, .box.box-solid.box-info, .box.box-solid.box-success {
+    border: 1px solid var(--rule);
+  }
+  .box.box-solid.box-primary > .box-header, .box.box-solid.box-info > .box-header,
+  .box.box-solid.box-success > .box-header {
+    background: var(--surface); color: var(--ink);
+  }
+  .box.box-solid > .box-header .btn, .box.box-solid > .box-header a { color: var(--ink-3); }
 
   /* --- value boxes: flat, quiet, legible -------------------------------- */
 
@@ -152,7 +162,7 @@ app_css <- sprintf("
     background: var(--surface) !important;
     color: var(--ink) !important;
   }
-  .small-box .icon { display: none; }
+  .small-box .icon, .small-box .icon-large { display: none; }
   .small-box p, .small-box h3 { color: var(--ink) !important; }
   .small-box > .inner { padding: 16px 18px; }
   .small-box.bg-green { border-top: 3px solid %s; }
