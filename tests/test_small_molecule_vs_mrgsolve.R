@@ -5,9 +5,9 @@
 # Run from the repository root: Rscript tests/test_engine_vs_mrgsolve.R
 
 for (f in c("physiology", "partition", "drugs", "pbpk_engine", "simulate")) {
-  source(file.path("R", paste0(f, ".R")))
+  source(file.path("apps", "small-molecule", "R", paste0(f, ".R")))
 }
-source(file.path("reference", "mrgsolve_engine.R"))
+source(file.path("reference", "pbpk_small_molecule.R"))
 if (!mrgsolve_ready()) stop("mrgsolve is not installed")
 
 # Off-grid output times, so no comparison lands exactly on a dose time

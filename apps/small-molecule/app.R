@@ -20,15 +20,19 @@ library(DT)
 library(ggplot2)
 library(scales)
 
-for (f in c("theme", "physiology", "partition", "drugs", "pbpk_engine", "simulate")) {
+# Locally this app runs from apps/small-molecule/ (shared code and models two
+# levels up); in the browser build everything sits next to app.R.
+source(if (file.exists(file.path("R", "theme.R"))) file.path("R", "theme.R") else file.path("..", "..", "shared", "theme.R"))
+for (f in c("physiology", "partition", "drugs", "pbpk_engine", "simulate")) {
   source(file.path("R", paste0(f, ".R")))
 }
 
 ENGINE <- list(name = "Matrix exponential (base R)", simulate = pbpk_simulate)
-if (file.exists(file.path("reference", "mrgsolve_engine.R"))) {
-  source(file.path("reference", "mrgsolve_engine.R"))
+REF <- file.path("..", "..", "reference", "pbpk_small_molecule.R")
+if (file.exists(REF)) {
+  source(REF)
   if (mrgsolve_ready()) {
-    ok <- tryCatch({ pbpk_mrgsolve_model(); TRUE }, error = function(e) FALSE)
+    ok <- tryCatch({ pbpk_mrgsolve_model(file.path("..", "..", "models")); TRUE }, error = function(e) FALSE)
     if (ok) {
       ENGINE <- list(name = paste("mrgsolve", utils::packageVersion("mrgsolve")),
                      simulate = pbpk_simulate_mrgsolve)

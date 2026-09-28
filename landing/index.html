@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PBPK Models</title>
+<meta name="description" content="Interactive physiologically based pharmacokinetic models - whole-body small-molecule PBPK with pediatric scaling, rifampicin drug-drug interactions and antibody minimal PBPK - as mrgsolve models that run in the browser.">
+<style>
+  :root {
+    --ink: #16181d; --ink-2: #454951; --ink-3: #6b7078; --rule: #e4e6ea;
+    --surface: #ffffff; --sunken: #f7f8fa; --accent: #2a78d6; --accent-ink: #1d5fae; --tag: #edf3fc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f2f3f5; --ink-2: #c9ccd2; --ink-3: #9aa0a8; --rule: #2c3038;
+      --surface: #1b1d22; --sunken: #121417; --accent: #5b9be6; --accent-ink: #8ab8ef; --tag: #1f2a3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--sunken); color: var(--ink-2);
+         font: 16px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { color: var(--ink); font-size: 30px; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .lede { max-width: 760px; margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 22px;
+          display: flex; flex-direction: column; }
+  .card h2 { color: var(--ink); font-size: 19px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .tags { margin: 6px 0 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: var(--tag); color: var(--accent-ink); font-size: 12px; padding: 2px 8px; border-radius: 999px; }
+  .card p { margin: 0 0 12px; font-size: 15px; }
+  .ref { color: var(--ink-3); font-size: 13px; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--rule); }
+  .open { display: inline-block; margin: 6px 0 14px; color: #fff; background: var(--accent); border-radius: 8px;
+          padding: 8px 14px; text-decoration: none; font-weight: 600; font-size: 14px; align-self: flex-start; }
+  .open:hover { background: var(--accent-ink); }
+  section { margin-top: 40px; }
+  h3 { color: var(--ink); font-size: 17px; margin: 0 0 8px; }
+  a { color: var(--accent-ink); }
+  footer { margin-top: 48px; color: var(--ink-3); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Physiologically based pharmacokinetic models</h1>
+  <p class="lede">PBPK models describe where a drug goes and how it is eliminated, using the body's
+  real organ volumes, blood flows and clearance pathways. That makes them the tool for questions
+  like drug-drug interactions and dosing in children. Each model is an
+  <a href="https://mrgsolve.org">mrgsolve</a> model and runs in your browser; nothing to install.
+  The first load takes about half a minute while R starts up in the page.</p>
+
+  <div class="grid">
+    <article class="card">
+      <h2>Whole-body small-molecule PBPK</h2>
+      <div class="tags"><span class="tag">Rodgers &amp; Rowland Kp</span><span class="tag">Pediatric scaling</span><span class="tag">4 drugs</span></div>
+      <p>Twelve perfusion-limited tissues with mechanistic partitioning, hepatic and renal clearance,
+      oral absorption, and first-order pediatric scaling with GFR maturation and enzyme ontogeny.</p>
+      <a class="open" href="small-molecule/">Open the app</a>
+      <div class="ref">Rodgers &amp; Rowland, J Pharm Sci 2005/2006; tissue data from Utsey et al., Drug Metab Dispos 2020; Rhodin et al., Pediatr Nephrol 2009.</div>
+    </article>
+    <article class="card">
+      <h2>DDI: rifampicin induces CYP3A (midazolam)</h2>
+      <div class="tags"><span class="tag">Enzyme turnover</span><span class="tag">Liver and gut</span><span class="tag">Auto-induction</span></div>
+      <p>Rifampicin's full PBPK model induces hepatic and intestinal CYP3A; midazolam shows the
+      consequence, and how it wears off after rifampicin stops.</p>
+      <a class="open" href="ddi-cyp3a/">Open the app</a>
+      <div class="ref">Asaumi R, Toshimoto K, Tobe Y, et al. CPT Pharmacometrics Syst Pharmacol 2018;7:186-196.</div>
+    </article>
+    <article class="card">
+      <h2>DDI: OATP inhibition vs induction (glibenclamide)</h2>
+      <div class="tags"><span class="tag">Transporters</span><span class="tag">Complex DDI</span><span class="tag">Timing</span></div>
+      <p>Rifampicin blocks OATP uptake of glibenclamide while present and induces CYP2C9/3A over days,
+      so the interaction flips direction depending on when the victim drug is taken.</p>
+      <a class="open" href="ddi-oatp/">Open the app</a>
+      <div class="ref">Asaumi R, Toshimoto K, Tobe Y, et al. CPT Pharmacometrics Syst Pharmacol 2018;7:186-196.</div>
+    </article>
+    <article class="card">
+      <h2>Monoclonal antibodies: minimal PBPK with TMDD</h2>
+      <div class="tags"><span class="tag">Tight / leaky ISF</span><span class="tag">Lymph</span><span class="tag">Target binding</span></div>
+      <p>Convective distribution into the interstitial fluid of two tissue groups and lymph return,
+      with optional target-mediated disposition; trastuzumab and ten other antibodies.</p>
+      <a class="open" href="mab/">Open the app</a>
+      <div class="ref">Cao Y, Balthasar JP, Jusko WJ. J Pharmacokinet Pharmacodyn 2013;40:597-607; Cao Y, Jusko WJ. 2014;41:375-387.</div>
+    </article>
+  </div>
+
+  <section>
+    <h3>How it works</h3>
+    <p>Every model is an mrgsolve model file. Run locally with mrgsolve installed, the apps simulate
+    through mrgsolve. In the browser, the small-molecule model is solved exactly by matrix
+    exponential, and the other models are translated to R and solved with a stiff Rosenbrock solver.
+    The test suite checks each browser engine against mrgsolve, and each model against its published
+    results, before every deployment. Source: <a href="https://github.com/Wrlog/PBPK">github.com/Wrlog/PBPK</a>.
+    For models that add pharmacodynamics and disease biology, see the
+    <a href="https://wrlog.github.io/QSP/">QSP models</a>.</p>
+  </section>
+
+  <footer>For research and teaching only. Nothing here is validated for clinical use or should guide the treatment of a patient.</footer>
+</main>
+</body>
+</html>

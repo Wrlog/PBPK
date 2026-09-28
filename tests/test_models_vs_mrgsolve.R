@@ -1,0 +1,53 @@
+# The DDI and antibody models, solved by the browser engine
+# (shared/ode_engine.R, at the apps' tolerances) and by mrgsolve compiling
+# the same model file, must agree. (The small-molecule model has its own
+# exact engine and its own test: tests/test_small_molecule_vs_mrgsolve.R.)
+#
+# Run from the repository root: Rscript tests/test_models_vs_mrgsolve.R
+
+suppressMessages(library(shiny))
+for (f in c("ode_engine.R", "app_helpers.R", "rifampicin.R")) source(file.path("shared", f))
+source(file.path("reference", "mrgsolve_engine.R"))
+if (!mrgsolve_ready()) stop("mrgsolve is not installed")
+
+rel <- function(a, b) max(abs(a - b)) / max(abs(b))
+worst <- c()
+report <- function(name, d) { cat(sprintf("  %-42s %.2e\n", name, d)); worst[name] <<- d }
+
+# Rifampicin 600 mg x 7 days, then midazolam 3 mg PO and 1 mg IV
+m <- mrg_read("models/ddi_rifampicin_midazolam.cpp")
+t_v <- 7 * 24
+ev <- rbind(rif_events(600, 7), data.frame(time = t_v + MDZ_TLAG, cmt = "MDZ_GUT", amt = 3, rate = 0))
+tt <- ddi_times(t_v, 24)
+a <- mrg_solve(m, data.frame(BW = 70), ev, tt, rtol = 1e-5, atol = 1e-10)
+b <- mrg_solve_mrgsolve(m, data.frame(BW = 70), ev, tt)
+for (v in c("MDZ", "RIF", "CYP3A_LIVER", "CYP3A_GUT")) report(paste("midazolam DDI", v), rel(a[[v]], b[[v]]))
+
+# Rifampicin IV + glibenclamide, and 7 days oral rifampicin then glibenclamide on day 9
+m <- mrg_read("models/ddi_rifampicin_glibenclamide.cpp")
+for (sc in c("iv", "po")) {
+  t_v <- if (sc == "iv") 0 else 8 * 24
+  ev <- rbind(if (sc == "iv") rif_events(600, 1, "iv", 0) else rif_events(600, 7),
+              data.frame(time = t_v + GLB_TLAG, cmt = "GLB_GUT", amt = 1.25, rate = 0))
+  tt <- ddi_times(t_v, 48)
+  a <- mrg_solve(m, data.frame(BW = 70), ev, tt, rtol = 1e-5, atol = 1e-10)
+  b <- mrg_solve_mrgsolve(m, data.frame(BW = 70), ev, tt)
+  for (v in c("GLB", "RIF", "CYP2C9_LIVER", "OATP_ACTIVITY")) report(sprintf("glibenclamide DDI (%s) %s", sc, v), rel(a[[v]], b[[v]]))
+}
+
+# Antibody: trastuzumab 4 -> 2 mg/kg weekly (TMDD), and a linear antibody
+m <- mrg_read("models/mab_mpbpk_tmdd.cpp")
+nmol <- function(mg) mg * 1e6 / 148000
+ev <- rbind(data.frame(time = 0, cmt = "CENT", amt = nmol(280), rate = nmol(280) / 1.5, ii = 0, addl = 0),
+            data.frame(time = 168, cmt = "CENT", amt = nmol(140), rate = nmol(140) / 0.5, ii = 168, addl = 10))
+tt <- seq(0, 168 * 14, by = 12) + 0.01
+for (tm in 1:0) {
+  a <- mrg_solve(m, data.frame(TMDD = tm), ev, tt, rtol = 1e-5, atol = 1e-9, nonneg = TRUE)
+  b <- mrg_solve_mrgsolve(m, data.frame(TMDD = tm), ev, tt)
+  report(sprintf("antibody plasma (TMDD=%d)", tm), rel(a$CP_UGML, b$CP_UGML))
+  report(sprintf("antibody leaky ISF (TMDD=%d)", tm), rel(a$ISF_LEAKY_UGML, b$ISF_LEAKY_UGML))
+}
+
+cat(sprintf("comparisons: %d, worst: %.2e\n", length(worst), max(worst)))
+if (!all(is.finite(worst)) || max(worst) > 2e-3) stop("browser engine disagrees with mrgsolve")
+cat("PASS\n")

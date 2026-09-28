@@ -3,7 +3,7 @@
 # Run from the repository root: Rscript tests/test_model.R
 
 for (f in c("physiology", "partition", "drugs", "pbpk_engine", "simulate")) {
-  source(file.path("R", paste0(f, ".R")))
+  source(file.path("apps", "small-molecule", "R", paste0(f, ".R")))
 }
 
 check <- function(ok, msg) {

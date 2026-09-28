@@ -1,9 +1,9 @@
-name: Test and deploy the web version
+name: Test and deploy the web apps
 
-# Runs the model tests, checks the browser engine against mrgsolve, then
-# exports the app to WebAssembly with shinylive and publishes it to GitHub
-# Pages, so it runs in the browser with no server. If any test fails,
-# nothing is deployed.
+# Runs the tests (every model against mrgsolve, and against its published
+# results), then exports each app in apps/ to WebAssembly with shinylive
+# and publishes them, with the landing page, to GitHub Pages. If any test
+# fails, nothing is deployed.
 
 on:
   push:
@@ -33,32 +33,35 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("mrgsolve", "shiny", "shinydashboard", "DT", "ggplot2", "scales", "shinylive"))'
+          Rscript -e 'install.packages(c("mrgsolve", "shiny", "shinydashboard", "DT", "ggplot2", "scales", "jsonlite", "shinylive"))'
 
-      - name: Model properties (base R)
-        run: Rscript tests/test_model.R
-
-      - name: Browser engine vs mrgsolve
-        run: Rscript tests/test_engine_vs_mrgsolve.R
-
-      - name: Parse the app
+      - name: Run the tests
         run: |
-          Rscript -e 'invisible(parse("app.R")); invisible(lapply(list.files("R", full.names = TRUE), parse)); cat("parses\n")'
+          for t in tests/*.R; do
+            echo "::group::$t"
+            Rscript "$t"
+            echo "::endgroup::"
+          done
 
-      # The browser build gets app.R and R/ only. reference/ (mrgsolve) and
-      # models/ stay behind, since nothing can be compiled in a browser.
-      - name: Assemble the app directory
-        run: |
-          mkdir -p build/R
-          cp app.R build/
-          cp R/*.R build/R/
-          ls -R build
+      # Each app gets app.R, its own R/ and data/ files, the shared R code
+      # and the model files. reference/ (mrgsolve) stays behind: nothing can
+      # be compiled in a browser.
+      - name: Assemble the apps
+        run: bash tools/assemble_apps.sh build
 
       - name: Export to WebAssembly
-        run: Rscript -e 'shinylive::export("build", "site")'
+        run: |
+          for d in build/*/; do
+            name=$(basename "$d")
+            Rscript -e 'a <- commandArgs(TRUE); shinylive::export(a[1], "site", subdir = a[2])' "$d" "$name"
+          done
+          cp landing/index.html site/index.html
 
-      - name: Landing page check
-        run: test -f site/index.html && du -sh site
+      - name: Check the site
+        run: |
+          test -f site/index.html
+          for d in build/*/; do test -f "site/$(basename "$d")/index.html"; done
+          du -sh site
 
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
