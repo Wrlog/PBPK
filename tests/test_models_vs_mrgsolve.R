@@ -48,6 +48,17 @@ for (tm in 1:0) {
   report(sprintf("antibody leaky ISF (TMDD=%d)", tm), rel(a$ISF_LEAKY_UGML, b$ISF_LEAKY_UGML))
 }
 
+# CAR-T PBPK-PD (mouse): four dose levels against a BCMA+ xenograft
+m <- mrg_read("models/cart_pbpk_pd_singh2020.cpp")
+cells <- c(1e5, 1e6, 5e6, 1e7)
+ev <- do.call(rbind, lapply(seq_along(cells), function(i)
+  data.frame(time = 0, cmt = "C_Blood", amt = cells[i] / 0.944, ID = i)))
+P <- data.frame(VTUMOR0 = rep(0.05, length(cells)))
+tt <- seq(2, 672, by = 6)   # mrgsolve reports pre-dose at time 0
+a <- mrg_solve(m, P, ev, tt, rtol = 1e-6, atol = 1e-6)
+b <- mrg_solve_mrgsolve(m, P, ev, tt)
+for (v in c("TumorVolume", "CARTblood", "CARTtumor", "CplxPT")) report(paste("cart-pbpk", v), rel(a[[v]], b[[v]]))
+
 cat(sprintf("comparisons: %d, worst: %.2e\n", length(worst), max(worst)))
 if (!all(is.finite(worst)) || max(worst) > 2e-3) stop("browser engine disagrees with mrgsolve")
 cat("PASS\n")

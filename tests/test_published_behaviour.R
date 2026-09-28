@@ -65,4 +65,32 @@ check(auc_per_dose(0.3) < 0.5 * auc_per_dose(10), "target-mediated clearance: lo
 lin <- mrg_solve(m, data.frame(TMDD = 0), data.frame(time = 0, cmt = "CENT", amt = nmol(700)), tt, rtol = 1e-5, atol = 1e-10)
 check(max(lin$ISF_LEAKY_UGML) > max(lin$ISF_TIGHT_UGML), "leaky tissues reach higher interstitial concentrations than tight ones")
 
+# --- CAR-T PBPK-PD, mouse (Singh 2020) ---------------------------------------------
+m <- mrg_read("models/cart_pbpk_pd_singh2020.cpp")
+cart <- function(cells, days = 28, P = data.frame(VTUMOR0 = 0.05)) {
+  ev <- if (cells > 0) data.frame(time = 0, cmt = "C_Blood", amt = cells / 0.944) else NULL
+  tt <- seq(0, 24 * days, by = 6)
+  list(t = tt / 24, r = mrg_solve(m, P, ev, tt, rtol = 1e-6, atol = 1e-6))
+}
+ctrl <- cart(0); hi <- cart(1e7); lo <- cart(1e5)
+n <- length(ctrl$t)
+check(ctrl$r$TumorVolume[n, 1] / ctrl$r$TumorVolume[1, 1] > 5,
+      sprintf("the untreated xenograft grows from 50 to %.0f mm3 in 28 days", ctrl$r$TumorVolume[n, 1]))
+check(hi$r$TumorVolume[n, 1] < 0.05 * ctrl$r$TumorVolume[n, 1],
+      sprintf("10 million CAR-T cells clear the tumour (%.1f mm3 vs %.0f untreated)", hi$r$TumorVolume[n, 1], ctrl$r$TumorVolume[n, 1]))
+check(lo$r$TumorVolume[n, 1] > 0.5 * ctrl$r$TumorVolume[n, 1], "0.1 million cells do not control it: the response is dose-dependent")
+i <- which.max(hi$r$CARTtumor[, 1])
+check(hi$t[i] > 3 && max(hi$r$CARTtumor[, 1]) > 10 * hi$r$CARTtumor[which.min(abs(hi$t - 1)), 1],
+      sprintf("CAR-T cells expand in the tumour, peaking on day %.0f", hi$t[i]))
+lung <- max(hi$r$states[, "C_E_Lung", 1]); brain <- max(hi$r$states[, "C_E_Brain", 1])
+check(lung > 100 * brain, "cells accumulate in lung far more than in brain, as the fitted transmigration rates imply")
+# affinity saturates: 0.1 nM is no better than 1 nM, but 1000 nM is worse
+kd_run <- function(kd) {
+  P <- data.frame(KOFF = 1.08e-12 * kd * 6.022e11, VTUMOR0 = 0.05)
+  cart(1e7, P = P)$r$TumorVolume[n, 1]
+}
+v <- vapply(c(0.1, 1, 1000), kd_run, 0)
+check(abs(v[1] - v[2]) < 0.01 * ctrl$r$TumorVolume[n, 1] && v[3] > 10 * v[2],
+      "affinity saturates: 0.1 and 1 nM give the same result, 1000 nM much less killing")
+
 cat("PASS\n")
