@@ -1,6 +1,6 @@
 # Physiologically based pharmacokinetic models
 
-Five physiologically based pharmacokinetic (PBPK) models as
+Six physiologically based pharmacokinetic (PBPK) models as
 [mrgsolve](https://mrgsolve.org) models, each with an interactive Shiny app that
 runs in the browser. PBPK models describe where a drug goes and how it is
 eliminated, using real organ volumes, blood flows and clearance pathways. That
@@ -23,6 +23,7 @@ use or should guide the treatment of a patient.
 | [DDI: CYP3A induction](apps/ddi-cyp3a) | Rifampicin (5-zone liver with OATP uptake, segregated-flow gut, UGT auto-induction) inducing hepatic and intestinal CYP3A; midazolam as the victim | Asaumi et al., *CPT:PSP* 2018;7:186 |
 | [DDI: OATP + induction](apps/ddi-oatp) | Rifampicin inhibiting OATP uptake of glibenclamide while inducing CYP2C9/3A: a complex interaction that changes direction with timing | Asaumi et al., *CPT:PSP* 2018;7:186 |
 | [Antibodies](apps/mab) | Second-generation minimal PBPK for IgG (plasma, tight and leaky interstitial fluid, lymph) with optional target-mediated disposition in the interstitial fluid. Trastuzumab and ten other antibodies | Cao, Balthasar & Jusko, *JPKPD* 2013;40:597; Cao & Jusko, *JPKPD* 2014;41:375 |
+| [Bispecific antibodies](apps/bispecific) | Generalized minimal PBPK for a drug with two different arms: two targets in blood, leaky and tight tissue and a tumour, soluble or on cells; trans-binding (T-cell engagers), cis-binding with avidity (tumour-targeted bispecifics) and bivalent binding. Four case studies: an anti-IL-13/IL-17 bispecific in volunteers, mosunetuzumab (CD20 x CD3) in monkeys, CD3 affinity, and a tumour-targeted bispecific against a bivalent antibody | Spinosa et al., *CPT:PSP* 2026;15:e70167 |
 | [CAR-T cells](apps/cart-pbpk) | **Preclinical (mouse).** Whole-body distribution of infused CAR-T cells through eight tissues and a tumour, each with vascular and extravascular space; CAR-target complex formation in the tumour drives CAR-T expansion and tumour killing | Singh et al., *mAbs* 2020;12:1688616 |
 
 ### Small-molecule whole-body PBPK
@@ -69,6 +70,22 @@ drive both CAR-T expansion and killing, with killing delayed through four
 transit compartments. Defaults are the anti-BCMA CAR-T run against RPMI-8226
 myeloma xenografts.
 
+### Bispecific antibody minimal PBPK
+
+Built by [tools/build_bispecific.py](tools/build_bispecific.py) from the authors'
+SimBiology project (Data S1), which
+[tools/extract_simbiology.py](tools/extract_simbiology.py) reads without MATLAB.
+The project stores every space of the minimal PBPK body as species in one
+compartment of volume 1 with unit conversion off, so each species' derivative is
+the sum of its reaction rates, with the volume conversions written into the rates.
+The model file has 93 states, 273 reactions and 12 rate rules, and the two MATLAB
+helper functions the rates call are expanded inline. Parameters for the four case
+studies are the paper's Model parameters.xlsx
+([apps/bispecific/data](apps/bispecific/data)). Two choices the paper states in
+its text rather than its spreadsheet: the tumour-targeted case sets avidity as the
+effective factor of Fig. 7 (1000 by default, only for the second, therapeutic arm),
+and its bivalent comparator binds the therapeutic receptor at 10 nM (Table S4).
+
 ### Antibody minimal PBPK
 
 Plasma exchanges with the interstitial fluid of "tight" and "leaky" tissues by
@@ -96,6 +113,15 @@ These are checked on every build (`tests/test_published_behaviour.R`,
 - **Small-molecule model:** mass balance, dose-proportionality, well-stirred
   hepatic clearance, oral F = Fa·Fg·Fh, and the caffeine half-life falling as
   CYP1A2 matures.
+- **Bispecific antibodies:** 750 mg IV of the anti-IL-13/IL-17 bispecific
+  neutralises about 80% of IL-17AA and 95% of IL-13 in serum on day 28 (paper: about
+  80% and 90%). In monkeys, mosunetuzumab exposure at 1 mg/kg rises 1.7-fold without
+  CD3 binding but only 1.1-fold without CD20: T cells clear much of the drug even at
+  the highest dose. With a 40 nM CD3 arm most of the drug is cleared through T cells
+  (72% at 0.1 mg/kg); at 400 nM nonspecific clearance dominates. For the
+  tumour-targeted bispecific, avidity raises tumour occupancy (1% to 56% at 0.1 mg/kg)
+  while leaving blood occupancy almost unchanged, and a bivalent antibody engages
+  blood more than tumour.
 - **CAR-T cells (mouse):** the untreated xenograft grows from 50 to 388 mm³ in
   28 days; 10 million CAR-T cells clear it, 0.1 million do not. Cells expand in
   the tumour and peak around day 15, and reach the lung far more than the brain.
@@ -112,8 +138,9 @@ which a browser can't do, so the browser apps use:
   It agrees with mrgsolve to about 2e-8.
 - **All other models:** [shared/ode_engine.R](shared/ode_engine.R) reads the
   same model file, translates it into vectorised R, and integrates it with a stiff
-  Rosenbrock solver. It agrees with mrgsolve to within 1e-4 at the tolerances the
-  apps use.
+  Rosenbrock solver. It agrees with mrgsolve to within 5e-4 at the tolerances the
+  apps use. The bispecific model (93 states) takes a few seconds per simulation in
+  the browser.
 
 Run locally with mrgsolve installed, the apps simulate through mrgsolve instead;
 the About tab says which engine is in use. The tests compare the engines on every
@@ -146,6 +173,64 @@ Rscript tests/test_models_vs_mrgsolve.R          # needs mrgsolve
 - `tests/`: engine agreement and published-behaviour checks
 - `landing/`: the index page of the site
 - `.github/workflows/shinylive.yml`: tests, WebAssembly export and GitHub Pages deploy
+
+## Further reading: ADCs and bispecific and multispecific antibodies
+
+Papers on PBPK modelling of these modalities, for anyone extending the repository.
+Open-access ones are marked OA.
+
+Bispecific and multispecific antibodies:
+- Spinosa P, et al. A generalized minimal PBPK-PD model of bispecific antibodies.
+  *CPT:PSP* 2026;15:e70167 (OA; the [Bispecific](apps/bispecific) app).
+- Susilo ME, Schaller S, Jiménez-Franco LD, et al. Whole-body physiologically based
+  pharmacokinetic modeling framework for tissue target engagement of CD3 bispecific
+  antibodies. *Pharmaceutics* 2025;17:500 (OA; PK-Sim/MoBi, T-cell trafficking and
+  synapse formation in mice).
+- Yoneyama T, Kim MS, Piatkov K, Wang H, Zhu AZX. Leveraging a physiologically-based
+  quantitative translational modeling platform for designing B cell maturation
+  antigen-targeting bispecific T cell engagers. *PLoS Comput Biol* 2022;18:e1009715 (OA).
+- Schropp J, Khot A, Shah DK, Koch G. Target-mediated drug disposition model for
+  bispecific antibodies. *CPT:PSP* 2019;8:177-187 (OA).
+- Chudasama VL, Zutshi A, Singh P, et al. Simulations of site-specific target-mediated
+  pharmacokinetic models for guiding the development of bispecific antibodies.
+  *J Pharmacokinet Pharmacodyn* 2015;42:1-18.
+- Gibbs JP, Yuraszeck T, Biesdorf C, Xu Y, Kasichayanula S. Informing development of
+  bispecific antibodies using physiologically based pharmacokinetic-pharmacodynamic
+  models: current capabilities and future opportunities. *J Clin Pharmacol*
+  2020;60:S132-S146.
+- Willemin ME, Gong J, Hilder BW, et al. Evaluation of drug-drug interaction potential
+  of talquetamab, a T-cell-redirecting GPRC5D x CD3 bispecific antibody (PBPK,
+  cytokine-mediated CYP suppression). *Target Oncol* 2024;19:965-979 (OA).
+
+Antibody-drug conjugates:
+- Chang HP, Shah DK. A translational physiologically-based pharmacokinetic model for
+  MMAE-based antibody-drug conjugates. *J Pharmacokinet Pharmacodyn* 2025;52:27 (OA;
+  mouse to rat, monkey and human).
+- Chang HP, Cheung YK, Shah DK. Whole-body pharmacokinetics and physiologically based
+  pharmacokinetic model for monomethyl auristatin E (MMAE). *J Clin Med* 2021;10:1332 (OA).
+- Khot A, Tibbitts J, Rock D, Shah DK. Development of a translational physiologically
+  based pharmacokinetic model for antibody-drug conjugates: a case study with T-DM1.
+  *AAPS J* 2017;19:1715-1734.
+- Shah DK, Betts AM. Towards a platform PBPK model to characterize the plasma and
+  tissue disposition of monoclonal antibodies in preclinical species and human.
+  *J Pharmacokinet Pharmacodyn* 2012;39:67-86 (the antibody platform the ADC models
+  build on).
+- Watanabe A, Gill KL, Chen KF, et al. Physiologically based pharmacokinetic model to
+  predict drug-drug interactions with the antibody-drug conjugate trastuzumab
+  deruxtecan. *CPT:PSP* 2026;15:e70284 (OA; Simcyp).
+- Choules MP, Zuo P, Otsuka Y, et al. Physiologically based pharmacokinetic model to
+  predict drug-drug interactions with the antibody-drug conjugate enfortumab vedotin.
+  *J Pharmacokinet Pharmacodyn* 2024;51:417-428 (OA; Simcyp, with brentuximab vedotin).
+- Zunino C, Wang S, Zhang Y, et al. Prediction of a CLDN18.2 targeted antibody drug
+  conjugate pharmacokinetics in cancer patients using PBPK modeling. *CPT:PSP*
+  2025;14:1494-1503 (OA; PK-Sim/MoBi, project file supplied).
+
+An ADC PBPK app is not here yet. The most complete open model (Chang & Shah 2025)
+leaves out the lymph flows, the lymph-node flow that balances the circulation, and
+the vascular reflection and MMAE permeability of four tissues. Filling those gaps
+would be a reconstruction, not a transcription. The Simcyp models can't be rebuilt
+outside Simcyp. For ADC pharmacodynamics, see the T-DM1 model in the
+[QSP repository](https://github.com/Wrlog/QSP).
 
 ## License
 

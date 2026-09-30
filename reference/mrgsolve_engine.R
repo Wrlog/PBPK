@@ -39,7 +39,7 @@ mrg_solve_mrgsolve <- function(model, P = data.frame(row.names = 1), events = NU
     data <- do.call(rbind, lapply(seq_len(m), function(i) {
       e <- ev[is.na(ev$ID) | ev$ID == i, , drop = FALSE]
       if (!nrow(e)) return(NULL)
-      data.frame(ID = i, time = e$time, cmt = e$cmt, amt = e$amt, rate = e$rate, evid = 1)
+      data.frame(ID = i, time = e$time, cmt = e$cmt, amt = e$amt, rate = e$rate, evid = e$evid)
     }))
     data <- data[order(data$ID, data$time), ]
   }

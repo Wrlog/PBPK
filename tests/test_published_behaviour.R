@@ -93,4 +93,42 @@ v <- vapply(c(0.1, 1, 1000), kd_run, 0)
 check(abs(v[1] - v[2]) < 0.01 * ctrl$r$TumorVolume[n, 1] && v[3] > 10 * v[2],
       "affinity saturates: 0.1 and 1 nM give the same result, 1000 nM much less killing")
 
+# --- Bispecific antibodies, generalized minimal PBPK (Spinosa 2026) --------------------
+source(file.path("apps", "bispecific", "R", "cases.R"))
+m <- mrg_read("models/bispecific_mpbpk_spinosa2026.cpp")
+bs <- function(P, ev, tt, case = "tce") mrg_solve(m, P, ev, tt, rtol = 1e-4, atol = case_tol(case)$atol, nonneg = TRUE)
+# Case 1: anti-IL-13/IL-17 (BITS7201A), 750 mg IV (Fig. 3d-e: ~80% and ~90% on day 28)
+P <- case_setup(m, "soluble")
+r <- bs(P, dose_events(P, 750, "mg", "IV", 1, 28), c(0.01, 28), "soluble")
+il17 <- 100 - r$TN_sR2_cen[2, 1]; il13 <- 100 - r$TN_sR1_cen[2, 1]
+check(il17 > 70 && il17 < 90 && il13 > 85 && il13 < 99,
+      sprintf("BITS7201A 750 mg IV neutralises IL-17AA by %.0f%% and IL-13 by %.0f%% on day 28 (paper ~80%% and ~90%%)", il17, il13))
+# Case 2: mosunetuzumab in monkeys; T cells clear much of the drug even at 1 mg/kg (Fig. 5e-f)
+P <- case_setup(m, "tce"); tt <- seq(0.1, 21, by = 0.1)
+auc <- function(P) { r <- bs(P, dose_events(P, 1, "mg/kg", "IV", 1, 7), tt); auc_trap(tt, r$D1_cen_ugml[, 1]) }
+a0 <- auc(P); P3 <- P; P3$rpc_mR2_cen <- 0; P20 <- P; P20$rpc_mR1_cen <- 0
+a3 <- auc(P3) / a0; a20 <- auc(P20) / a0
+check(a3 > 1.4 && a20 < 1.25 && a3 > a20,
+      sprintf("mosunetuzumab 1 mg/kg: exposure x%.1f without CD3 binding, only x%.2f without CD20", a3, a20))
+# Case 3: CD3 affinity decides how much drug T cells clear (Fig. 6b-c)
+share <- function(kd) {
+  P <- case_setup(m, "affinity", cd3_kd = kd)
+  s <- bs(P, dose_events(P, 0.1, "mg/kg", "IV", 1, 7), c(0.01, 21))$states[2, , 1]
+  s[c("CL_D1_NS_nmol", "CL_D1_TMDD_R2_cen_nmol")] / sum(s[c("CL_D1_NS_nmol", "CL_D1_TMDD_R1_cen_nmol", "CL_D1_TMDD_R2_cen_nmol")])
+}
+s40 <- share(40); s400 <- share(400)
+check(s40[2] > 0.5 && s400[1] > 0.5,
+      sprintf("0.1 mg/kg: %.0f%% cleared through CD3 at 40 nM; %.0f%% nonspecific at 400 nM", 100 * s40[2], 100 * s400[1]))
+# Case 4: tumour-targeted bispecific; avidity sets tumour but not blood occupancy (Fig. 7)
+ro <- function(chi, fm, dose) {
+  P <- case_setup(m, "cis", chi_e = chi, format = fm)
+  r <- bs(P, dose_events(P, dose, "mg/kg", "IV", 1, 7), c(0.01, 21))
+  c(blood = r$RO_mR1_cen[2, 1], tumour = r$RO_mR1_eff[2, 1])
+}
+hi <- ro(1000, "bispecific", 0.1); lo <- ro(1, "bispecific", 0.1); bv <- ro(1000, "bivalent", 0.1)
+check(hi["tumour"] > 50 && hi["blood"] < 40 && lo["tumour"] < lo["blood"] + 5 && abs(hi["blood"] - lo["blood"]) < 5,
+      sprintf("0.1 mg/kg: avidity 1000 gives %.0f%% in tumour vs %.0f%% in blood; without avidity %.0f%% vs %.0f%%",
+              hi["tumour"], hi["blood"], lo["tumour"], lo["blood"]))
+check(bv["blood"] > bv["tumour"], sprintf("a bivalent 10 nM antibody engages blood (%.0f%%) more than tumour (%.0f%%)", bv["blood"], bv["tumour"]))
+
 cat("PASS\n")

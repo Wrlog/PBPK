@@ -1,0 +1,300 @@
+case,sheet,parameter,value,units
+1,Case Study 1 Anti-IL17Anti-IL13,V_cen,52,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,V_tig,115.9,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,V_lea,62.4,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,V_eff,10,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,V_saf,10,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,V_lym,37.14,milliliter/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,L_D1,41.4288,milliliter/day/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,f_lea_D1,0.65,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,f_tig_D1,0.35,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,f_eff_D1,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,f_saf_D1,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,sig_lea_D1,0.7,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,sig_tig_D1,0.95,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,sig_lym_D1,0.2,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,sig_eff_D1,0.7,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,sig_saf_D1,0.7,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,CLp_D1,3.1,milliliter/day/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,Vm_cl_D1,0,nanomole/liter/day
+1,Case Study 1 Anti-IL17Anti-IL13,Km_cl_D1,1,nanomole/liter
+1,Case Study 1 Anti-IL17Anti-IL13,MWab_D1,150000,gram/mole
+1,Case Study 1 Anti-IL17Anti-IL13,MWab_D2,150000,gram/mole
+1,Case Study 1 Anti-IL17Anti-IL13,kon_R1_D1,3.6,1/(nM*day)
+1,Case Study 1 Anti-IL17Anti-IL13,kon_R2_D1,3.6,1/(nM*day)
+1,Case Study 1 Anti-IL17Anti-IL13,Kd_R1_D1,0.005,nM
+1,Case Study 1 Anti-IL17Anti-IL13,Kd_R2_D1,0.01,nM
+1,Case Study 1 Anti-IL17Anti-IL13,avid_R1_D1,1,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,avid_R2_D1,1,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,BW,70,kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,sR1_0_cen,6e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR1_0_lea,6e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR1_0_tig,6e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR1_0_eff,0,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR1_0_saf,0,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR2_0_cen,2.83e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR2_0_lea,2.83e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR2_0_tig,2.83e-06,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR2_0_eff,0,nM
+1,Case Study 1 Anti-IL17Anti-IL13,sR2_0_saf,0,nM
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_cellspermL_cen,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR1_cen,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_cellspermL_tig,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR1_tig,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_cellspermL_lea,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR1_lea,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_cellspermL_eff,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR1_eff,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_cellspermL_saf,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR1_saf,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_cellspermL_cen,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR2_cen,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_cellspermL_tig,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR2_tig,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_cellspermL_lea,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR2_lea,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_cellspermL_eff,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR2_eff,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_cellspermL_saf,1,cell/milliliter
+1,Case Study 1 Anti-IL17Anti-IL13,rpc_mR2_saf,0,molecule/cell
+1,Case Study 1 Anti-IL17Anti-IL13,Thalf_mR1,1,day
+1,Case Study 1 Anti-IL17Anti-IL13,Thalf_mR2,1,day
+1,Case Study 1 Anti-IL17Anti-IL13,Thalf_sR1,0.0208,day
+1,Case Study 1 Anti-IL17Anti-IL13,Thalf_sR2,0.0056,day
+1,Case Study 1 Anti-IL17Anti-IL13,mR1_fcint,1,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,mR2_fcint,1,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,DOSE_Amount_mpk_D1,0,milligram/kilogram
+1,Case Study 1 Anti-IL17Anti-IL13,DOSE_Rate_D1,0,nM/day
+1,Case Study 1 Anti-IL17Anti-IL13,DOSE_StartTime_D1,0,day
+1,Case Study 1 Anti-IL17Anti-IL13,DOSE_Interval_D1,0,day
+1,Case Study 1 Anti-IL17Anti-IL13,DOSE_RepeatCount_D1,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,kabs_D1,0.2,1/day
+1,Case Study 1 Anti-IL17Anti-IL13,F_D1,0.92,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,FLAG_BIVALENT_BINDING,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,FLAG_CIS_BINDING,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,FLAG_TRANS_BINDING,0,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,FLAG_soluble_target_trafficking_with_drug_D1,1,dimensionless
+1,Case Study 1 Anti-IL17Anti-IL13,FLAG_saturable_clearance_D1,0,dimensionless
+2,Case Study 2 Mosunetuzumab,V_cen,37.14,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,V_tig,115.9,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,V_lea,62.4,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,V_eff,10,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,V_saf,10,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,V_lym,44.4,milliliter/kilogram
+2,Case Study 2 Mosunetuzumab,L_D1,41.4288,milliliter/day/kilogram
+2,Case Study 2 Mosunetuzumab,f_lea_D1,0.65,dimensionless
+2,Case Study 2 Mosunetuzumab,f_tig_D1,0.35,dimensionless
+2,Case Study 2 Mosunetuzumab,f_eff_D1,0,dimensionless
+2,Case Study 2 Mosunetuzumab,f_saf_D1,0,dimensionless
+2,Case Study 2 Mosunetuzumab,sig_lea_D1,0.67,dimensionless
+2,Case Study 2 Mosunetuzumab,sig_tig_D1,0.95,dimensionless
+2,Case Study 2 Mosunetuzumab,sig_lym_D1,0.2,dimensionless
+2,Case Study 2 Mosunetuzumab,sig_eff_D1,0.7,dimensionless
+2,Case Study 2 Mosunetuzumab,sig_saf_D1,0.7,dimensionless
+2,Case Study 2 Mosunetuzumab,CLp_D1,4,milliliter/day/kilogram
+2,Case Study 2 Mosunetuzumab,Vm_cl_D1,0,nanomole/liter/day
+2,Case Study 2 Mosunetuzumab,Km_cl_D1,1,nanomole/liter
+2,Case Study 2 Mosunetuzumab,sR1_fc_CL,1,dimensionless
+2,Case Study 2 Mosunetuzumab,sR2_fc_CL,1,dimensionless
+2,Case Study 2 Mosunetuzumab,MWab_D1,150000,gram/mole
+2,Case Study 2 Mosunetuzumab,MWab_D2,150000,gram/mole
+2,Case Study 2 Mosunetuzumab,kon_R1_D1,3.6,1/(nM*day)
+2,Case Study 2 Mosunetuzumab,kon_R2_D1,3.6,1/(nM*day)
+2,Case Study 2 Mosunetuzumab,Kd_R1_D1,68,nM
+2,Case Study 2 Mosunetuzumab,Kd_R2_D1,40,nM
+2,Case Study 2 Mosunetuzumab,avid_R1_D1,1,dimensionless
+2,Case Study 2 Mosunetuzumab,avid_R2_D1,1,dimensionless
+2,Case Study 2 Mosunetuzumab,BW,3.12,kilogram
+2,Case Study 2 Mosunetuzumab,sR1_0_cen,0,nM
+2,Case Study 2 Mosunetuzumab,sR1_0_lea,0,nM
+2,Case Study 2 Mosunetuzumab,sR1_0_tig,0,nM
+2,Case Study 2 Mosunetuzumab,sR1_0_eff,0,nM
+2,Case Study 2 Mosunetuzumab,sR1_0_saf,0,nM
+2,Case Study 2 Mosunetuzumab,sR2_0_cen,0,nM
+2,Case Study 2 Mosunetuzumab,sR2_0_lea,0,nM
+2,Case Study 2 Mosunetuzumab,sR2_0_tig,0,nM
+2,Case Study 2 Mosunetuzumab,sR2_0_eff,0,nM
+2,Case Study 2 Mosunetuzumab,sR2_0_saf,0,nM
+2,Case Study 2 Mosunetuzumab,mR1_cellspermL_cen,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR1_cen,2300000000000,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR1_cellspermL_tig,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR1_tig,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR1_cellspermL_lea,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR1_lea,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR1_cellspermL_eff,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR1_eff,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR1_cellspermL_saf,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR1_saf,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR2_cellspermL_cen,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR2_cen,8000000000000,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR2_cellspermL_tig,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR2_tig,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR2_cellspermL_lea,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR2_lea,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR2_cellspermL_eff,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR2_eff,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,mR2_cellspermL_saf,1,cell/milliliter
+2,Case Study 2 Mosunetuzumab,rpc_mR2_saf,0,molecule/cell
+2,Case Study 2 Mosunetuzumab,Thalf_mR1,1,day
+2,Case Study 2 Mosunetuzumab,Thalf_mR2,0.7083,day
+2,Case Study 2 Mosunetuzumab,Thalf_sR1,1,day
+2,Case Study 2 Mosunetuzumab,Thalf_sR2,1,day
+2,Case Study 2 Mosunetuzumab,mR1_fcint,1,dimensionless
+2,Case Study 2 Mosunetuzumab,mR2_fcint,1,dimensionless
+2,Case Study 2 Mosunetuzumab,FLAG_BIVALENT_BINDING,0,dimensionless
+2,Case Study 2 Mosunetuzumab,FLAG_CIS_BINDING,0,dimensionless
+2,Case Study 2 Mosunetuzumab,FLAG_TRANS_BINDING,1,dimensionless
+2,Case Study 2 Mosunetuzumab,FLAG_soluble_target_trafficking_with_drug_D1,0,dimensionless
+2,Case Study 2 Mosunetuzumab,FLAG_saturable_clearance_D1,0,dimensionless
+3,Case Study 3,V_cen,37.14,milliliter/kilogram
+3,Case Study 3,V_tig,115.9,milliliter/kilogram
+3,Case Study 3,V_lea,62.4,milliliter/kilogram
+3,Case Study 3,V_eff,10,milliliter/kilogram
+3,Case Study 3,V_saf,10,milliliter/kilogram
+3,Case Study 3,V_lym,44.4,milliliter/kilogram
+3,Case Study 3,L_D1,41.4288,milliliter/day/kilogram
+3,Case Study 3,f_lea_D1,0.65,dimensionless
+3,Case Study 3,f_tig_D1,0.35,dimensionless
+3,Case Study 3,f_eff_D1,0,dimensionless
+3,Case Study 3,f_saf_D1,0,dimensionless
+3,Case Study 3,sig_lea_D1,0.67,dimensionless
+3,Case Study 3,sig_tig_D1,0.95,dimensionless
+3,Case Study 3,sig_lym_D1,0.2,dimensionless
+3,Case Study 3,sig_eff_D1,0.7,dimensionless
+3,Case Study 3,sig_saf_D1,0.7,dimensionless
+3,Case Study 3,CLp_D1,4,milliliter/day/kilogram
+3,Case Study 3,Vm_cl_D1,0,nanomole/liter/day
+3,Case Study 3,Km_cl_D1,1,nanomole/liter
+3,Case Study 3,sR1_fc_CL,1,dimensionless
+3,Case Study 3,sR2_fc_CL,1,dimensionless
+3,Case Study 3,MWab_D1,150000,gram/mole
+3,Case Study 3,MWab_D2,150000,gram/mole
+3,Case Study 3,kon_R1_D1,3.6,1/(nM*day)
+3,Case Study 3,kon_R2_D1,3.6,1/(nM*day)
+3,Case Study 3,Kd_R1_D1,68,nM
+3,Case Study 3,Kd_R2_D1,400,nM
+3,Case Study 3,avid_R1_D1,1,dimensionless
+3,Case Study 3,avid_R2_D1,1,dimensionless
+3,Case Study 3,BW,3.12,kilogram
+3,Case Study 3,sR1_0_cen,0,nM
+3,Case Study 3,sR1_0_lea,0,nM
+3,Case Study 3,sR1_0_tig,0,nM
+3,Case Study 3,sR1_0_eff,0,nM
+3,Case Study 3,sR1_0_saf,0,nM
+3,Case Study 3,sR2_0_cen,0,nM
+3,Case Study 3,sR2_0_lea,0,nM
+3,Case Study 3,sR2_0_tig,0,nM
+3,Case Study 3,sR2_0_eff,0,nM
+3,Case Study 3,sR2_0_saf,0,nM
+3,Case Study 3,mR1_cellspermL_cen,1,cell/milliliter
+3,Case Study 3,rpc_mR1_cen,2700000000000,molecule/cell
+3,Case Study 3,mR1_cellspermL_tig,1,cell/milliliter
+3,Case Study 3,rpc_mR1_tig,0,molecule/cell
+3,Case Study 3,mR1_cellspermL_lea,1,cell/milliliter
+3,Case Study 3,rpc_mR1_lea,0,molecule/cell
+3,Case Study 3,mR1_cellspermL_eff,1,cell/milliliter
+3,Case Study 3,rpc_mR1_eff,0,molecule/cell
+3,Case Study 3,mR1_cellspermL_saf,1,cell/milliliter
+3,Case Study 3,rpc_mR1_saf,0,molecule/cell
+3,Case Study 3,mR2_cellspermL_cen,1,cell/milliliter
+3,Case Study 3,rpc_mR2_cen,11500000000000,molecule/cell
+3,Case Study 3,mR2_cellspermL_tig,1,cell/milliliter
+3,Case Study 3,rpc_mR2_tig,0,molecule/cell
+3,Case Study 3,mR2_cellspermL_lea,1,cell/milliliter
+3,Case Study 3,rpc_mR2_lea,0,molecule/cell
+3,Case Study 3,mR2_cellspermL_eff,1,cell/milliliter
+3,Case Study 3,rpc_mR2_eff,0,molecule/cell
+3,Case Study 3,mR2_cellspermL_saf,1,cell/milliliter
+3,Case Study 3,rpc_mR2_saf,0,molecule/cell
+3,Case Study 3,Thalf_mR1,1,day
+3,Case Study 3,Thalf_mR2,0.7083,day
+3,Case Study 3,Thalf_sR1,1,day
+3,Case Study 3,Thalf_sR2,1,day
+3,Case Study 3,mR1_fcint,1,dimensionless
+3,Case Study 3,mR2_fcint,1,dimensionless
+3,Case Study 3,FLAG_BIVALENT_BINDING,0,dimensionless
+3,Case Study 3,FLAG_CIS_BINDING,0,dimensionless
+3,Case Study 3,FLAG_TRANS_BINDING,1,dimensionless
+3,Case Study 3,FLAG_soluble_target_trafficking_with_drug_D1,0,dimensionless
+3,Case Study 3,FLAG_saturable_clearance_D1,0,dimensionless
+4,Case Study 4,V_cen,37.14,milliliter/kilogram
+4,Case Study 4,V_tig,115.9,milliliter/kilogram
+4,Case Study 4,V_lea,62.4,milliliter/kilogram
+4,Case Study 4,V_eff,4,milliliter/kilogram
+4,Case Study 4,V_saf,10,milliliter/kilogram
+4,Case Study 4,V_lym,37.14,milliliter/kilogram
+4,Case Study 4,L_D1,41.4288,milliliter/day/kilogram
+4,Case Study 4,f_lea_D1,0.58,dimensionless
+4,Case Study 4,f_tig_D1,0.35,dimensionless
+4,Case Study 4,f_eff_D1,0.07,dimensionless
+4,Case Study 4,f_saf_D1,0,dimensionless
+4,Case Study 4,sig_lea_D1,0.7,dimensionless
+4,Case Study 4,sig_tig_D1,0.95,dimensionless
+4,Case Study 4,sig_lym_D1,0.2,dimensionless
+4,Case Study 4,sig_eff_D1,0.7,dimensionless
+4,Case Study 4,sig_saf_D1,0.7,dimensionless
+4,Case Study 4,L_D2,41.4288,milliliter/day/kilogram
+4,Case Study 4,f_lea_D2,0.58,dimensionless
+4,Case Study 4,f_tig_D2,0.35,dimensionless
+4,Case Study 4,f_eff_D2,0.07,dimensionless
+4,Case Study 4,f_saf_D2,0,dimensionless
+4,Case Study 4,sig_lea_D2,0.7,dimensionless
+4,Case Study 4,sig_tig_D2,0.95,dimensionless
+4,Case Study 4,sig_lym_D2,0.2,dimensionless
+4,Case Study 4,sig_eff_D2,0.7,dimensionless
+4,Case Study 4,sig_saf_D2,0.7,dimensionless
+4,Case Study 4,CLp_D1,2.8272,milliliter/day/kilogram
+4,Case Study 4,Vm_cl_D1,0,nanomole/liter/day
+4,Case Study 4,Km_cl_D1,1,nanomole/liter
+4,Case Study 4,MWab_D1,150000,gram/mole
+4,Case Study 4,MWab_D2,150000,gram/mole
+4,Case Study 4,kon_R1_D1,3.6,1/(nM*day)
+4,Case Study 4,kon_R2_D1,3.6,1/(nM*day)
+4,Case Study 4,Kd_R1_D1,100,nM
+4,Case Study 4,Kd_R2_D1,0.05,nM
+4,Case Study 4,kon_R1_D2,0,1/(nM*day)
+4,Case Study 4,Kd_R1_D2,8,nM
+4,Case Study 4,avid_R1_D1,1000000000,dimensionless
+4,Case Study 4,avid_R2_D1,1,dimensionless
+4,Case Study 4,BW,70,kilogram
+4,Case Study 4,sR1_0_cen,0,nM
+4,Case Study 4,sR1_0_lea,0,nM
+4,Case Study 4,sR1_0_tig,0,nM
+4,Case Study 4,sR1_0_eff,0,nM
+4,Case Study 4,sR1_0_saf,0,nM
+4,Case Study 4,sR2_0_cen,0,nM
+4,Case Study 4,sR2_0_lea,0,nM
+4,Case Study 4,sR2_0_tig,0,nM
+4,Case Study 4,sR2_0_eff,0,nM
+4,Case Study 4,sR2_0_saf,0,nM
+4,Case Study 4,mR1_cellspermL_cen,1000000,cell/milliliter
+4,Case Study 4,rpc_mR1_cen,10000,molecule/cell
+4,Case Study 4,mR1_cellspermL_tig,1000000,cell/milliliter
+4,Case Study 4,rpc_mR1_tig,10000,molecule/cell
+4,Case Study 4,mR1_cellspermL_lea,1000000,cell/milliliter
+4,Case Study 4,rpc_mR1_lea,10000,molecule/cell
+4,Case Study 4,mR1_cellspermL_eff,1000000,cell/milliliter
+4,Case Study 4,rpc_mR1_eff,10000,molecule/cell
+4,Case Study 4,mR1_cellspermL_saf,1,cell/milliliter
+4,Case Study 4,rpc_mR1_saf,0,molecule/cell
+4,Case Study 4,mR2_cellspermL_cen,1000000,cell/milliliter
+4,Case Study 4,rpc_mR2_cen,1000,molecule/cell
+4,Case Study 4,mR2_cellspermL_tig,1000000,cell/milliliter
+4,Case Study 4,rpc_mR2_tig,1000,molecule/cell
+4,Case Study 4,mR2_cellspermL_lea,1000000,cell/milliliter
+4,Case Study 4,rpc_mR2_lea,1000,molecule/cell
+4,Case Study 4,mR2_cellspermL_eff,1000000,cell/milliliter
+4,Case Study 4,rpc_mR2_eff,100000,molecule/cell
+4,Case Study 4,mR2_cellspermL_saf,1,cell/milliliter
+4,Case Study 4,rpc_mR2_saf,0,molecule/cell
+4,Case Study 4,Thalf_mR1,1,day
+4,Case Study 4,Thalf_mR2,1,day
+4,Case Study 4,Thalf_sR1,1,day
+4,Case Study 4,Thalf_sR2,1,day
+4,Case Study 4,mR1_fcint,1,dimensionless
+4,Case Study 4,mR2_fcint,1,dimensionless
+4,Case Study 4,FLAG_BIVALENT_BINDING,0,dimensionless
+4,Case Study 4,FLAG_CIS_BINDING,1,dimensionless
+4,Case Study 4,FLAG_TRANS_BINDING,0,dimensionless
+4,Case Study 4,FLAG_soluble_target_trafficking_with_drug_D1,0,dimensionless
+4,Case Study 4,FLAG_saturable_clearance_D1,0,dimensionless

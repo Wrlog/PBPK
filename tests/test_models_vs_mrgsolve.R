@@ -59,6 +59,22 @@ a <- mrg_solve(m, P, ev, tt, rtol = 1e-6, atol = 1e-6)
 b <- mrg_solve_mrgsolve(m, P, ev, tt)
 for (v in c("TumorVolume", "CARTblood", "CARTtumor", "CplxPT")) report(paste("cart-pbpk", v), rel(a[[v]], b[[v]]))
 
+# Bispecific mPBPK (Spinosa 2026): soluble targets SC, a T-cell engager weekly, cis-binding
+source(file.path("apps", "bispecific", "R", "cases.R"))
+m <- mrg_read("models/bispecific_mpbpk_spinosa2026.cpp")
+runs <- list(
+  soluble = list(case_setup(m, "soluble"), function(P) dose_events(P, 300, "mg", "SC", 1, 28), c("total_D1_cen_ugml", "TN_sR1_cen", "TN_sR2_lea")),
+  tce = list(case_setup(m, "tce"), function(P) dose_events(P, 0.1, "mg/kg", "IV", 3, 7), c("D1_cen_ugml", "RO_mR1_cen", "RO_mR2_cen")),
+  cis = list(case_setup(m, "cis", chi_e = 1000), function(P) dose_events(P, 0.3, "mg/kg", "IV", 1, 7), c("D1_eff_ugml", "RO_mR1_cen", "RO_mR1_eff"))
+)
+tt <- seq(0.5, 28, by = 0.5) + 0.01   # off the dose times: mrgsolve reports pre-dose there
+for (nm in names(runs)) {
+  P <- runs[[nm]][[1]]; ev <- runs[[nm]][[2]](P)
+  a <- mrg_solve(m, P, ev, tt, rtol = 1e-4, atol = case_tol(nm)$atol, nonneg = TRUE)
+  b <- mrg_solve_mrgsolve(m, P, ev, tt)
+  for (v in runs[[nm]][[3]]) report(paste("bispecific", nm, v), rel(a[[v]], b[[v]]))
+}
+
 cat(sprintf("comparisons: %d, worst: %.2e\n", length(worst), max(worst)))
 if (!all(is.finite(worst)) || max(worst) > 2e-3) stop("browser engine disagrees with mrgsolve")
 cat("PASS\n")

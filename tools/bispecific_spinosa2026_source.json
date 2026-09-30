@@ -1,0 +1,4350 @@
+{
+ "model": "generalized bsAb PK",
+ "compartments": [
+  {
+   "name": "minPBPK",
+   "value": 1.0
+  }
+ ],
+ "compile_options": {
+  "DefaultSpeciesDimension": "concentration",
+  "DimensionalAnalysis": 0,
+  "UnitConversion": 0
+ },
+ "species": [
+  {
+   "name": "mR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_cen_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_lym",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_lea_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_tig_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_eff_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_saf_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_lym_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR1_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR2_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR1_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR2_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR1_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR2_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR1_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR2_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR1_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "RO_mR2_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_lym",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_lym",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_lym",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_NS_nmol",
+   "value": 0.0,
+   "units": "nanomole",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R1_cen_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_cen_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R2_cen_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R1_tig_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_tig_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R2_tig_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R1_lea_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_lea_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R2_lea_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R1_eff_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_eff_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R2_eff_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R1_saf_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_saf_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_TMDD_R2_saf_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "CL_D1_tot_nmol",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_cen_2_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_tig_2_lym",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_lym_2_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_cen_2_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_lea_2_lym",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_cen_2_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_eff_2_lym",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_cen_2_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR2_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR2_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR2_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR2_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR2_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_eff",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "mR2_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR2_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR2_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "sR2_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR2_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR2_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_mR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_mR1_sR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR1_sR1_saf",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_lym",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_eff",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_sR2_saf",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_saf_2_lym",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_cen_mpk",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_D1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_D1_cen_ugml",
+   "value": 0.0,
+   "units": "microgram/milliliter",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_cen_mg",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "D1_ext_mg",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "rate_D1_ext_2_cen_mg_per_day",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR1_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR2_cen",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "trimer_per_mR1_cell",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "trimer_per_mR2_cell",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "AUC_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR2_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR2_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR1_lea",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "total_sR1_tig",
+   "value": 0.0,
+   "units": "nM",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR1_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR2_cen",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR1_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR2_lea",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR1_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  },
+  {
+   "name": "TN_sR2_tig",
+   "value": 0.0,
+   "units": "",
+   "boundary": false,
+   "constant": false
+  }
+ ],
+ "parameters": [
+  {
+   "name": "V_cen",
+   "value": 37.14,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "V_tig",
+   "value": 115.9,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "V_lea",
+   "value": 62.4,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "V_lym",
+   "value": 1.0,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "V_eff",
+   "value": 1.0,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "V_saf",
+   "value": 1.0,
+   "units": "milliliter/kilogram",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR1_cen",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "kdeg_mR1",
+   "value": 1.0,
+   "units": "1/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR2_cen",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "kdeg_mR2",
+   "value": 1.0,
+   "units": "1/day",
+   "constant": true
+  },
+  {
+   "name": "CLp",
+   "value": 2.4,
+   "units": "milliliter/day/kilogram",
+   "constant": true
+  },
+  {
+   "name": "MWab",
+   "value": 150000.0,
+   "units": "gram/mole",
+   "constant": true
+  },
+  {
+   "name": "sig_lea",
+   "value": 0.7,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "sig_tig",
+   "value": 0.95,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "sig_lym",
+   "value": 0.2,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR1_lea",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR2_lea",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR1_tig",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR2_tig",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "kon_R1",
+   "value": 0.0,
+   "units": "1/(nM*day)",
+   "constant": true
+  },
+  {
+   "name": "Kd_R1",
+   "value": 0.01,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "kon_R2",
+   "value": 0.0,
+   "units": "1/(nM*day)",
+   "constant": true
+  },
+  {
+   "name": "Kd_R2",
+   "value": 0.01,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "avid_R2",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "L",
+   "value": 41.4288,
+   "units": "milliliter/day/kilogram",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR1_eff",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR2_eff",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "sig_eff",
+   "value": 0.7,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "BW",
+   "value": 70.0,
+   "units": "kilogram",
+   "constant": true
+  },
+  {
+   "name": "L_saf",
+   "value": 1.0,
+   "units": "milliliter/day/kilogram",
+   "constant": true
+  },
+  {
+   "name": "sig_saf",
+   "value": 0.7,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "kdeg_sR1",
+   "value": 1.0,
+   "units": "1/day",
+   "constant": true
+  },
+  {
+   "name": "kdeg_sR2",
+   "value": 1.0,
+   "units": "1/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR1_cen",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR2_cen",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR1_tig",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR2_tig",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR1_lea",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR2_lea",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR1_eff",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR2_eff",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR1_saf",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_sR2_saf",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR1_saf",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "ksyn_mR2_saf",
+   "value": 1.0,
+   "units": "nM/day",
+   "constant": true
+  },
+  {
+   "name": "L_eff",
+   "value": 1.0,
+   "units": "milliliter/kilogram/day",
+   "constant": true
+  },
+  {
+   "name": "L_lea",
+   "value": 1.0,
+   "units": "milliliter/kilogram/day",
+   "constant": true
+  },
+  {
+   "name": "L_tig",
+   "value": 1.0,
+   "units": "milliliter/kilogram/day",
+   "constant": true
+  },
+  {
+   "name": "f_lea",
+   "value": 0.65,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "f_tig",
+   "value": 0.35,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "f_eff",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "f_saf",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "mR1_0_cen",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR1_0_lea",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR1_0_tig",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR1_0_saf",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR1_0_eff",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR1_0_cen",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR1_0_lea",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR1_0_tig",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR1_0_eff",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR1_0_saf",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR2_0_cen",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR2_0_lea",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR2_0_tig",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR2_0_eff",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR2_0_saf",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR2_0_cen",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR2_0_lea",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR2_0_tig",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR2_0_eff",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "sR2_0_saf",
+   "value": 0.0,
+   "units": "nM",
+   "constant": true
+  },
+  {
+   "name": "mR1_fcint",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "mR2_fcint",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "FLAG_BIVALENT_BINDING",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "avid_R1",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "mR1_cellspermL_cen",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR2_cellspermL_cen",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR1_cellspermL_tig",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR2_cellspermL_tig",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR1_cellspermL_lea",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR2_cellspermL_lea",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR1_cellspermL_eff",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR2_cellspermL_eff",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR1_cellspermL_saf",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "mR2_cellspermL_saf",
+   "value": 1.0,
+   "units": "cell/milliliter",
+   "constant": true
+  },
+  {
+   "name": "FLAG_CIS_BINDING",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "FLAG_TRANS_BINDING",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR1_cen",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR2_cen",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR1_tig",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR2_tig",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR1_lea",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR2_lea",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR1_eff",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR2_eff",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR1_saf",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "rpc_mR2_saf",
+   "value": 0.0,
+   "units": "molecule/cell",
+   "constant": true
+  },
+  {
+   "name": "Nav",
+   "value": 6.022e+23,
+   "units": "molecule/mole",
+   "constant": true
+  },
+  {
+   "name": "nmol_per_mol",
+   "value": 1000000000.0,
+   "units": "nanomole/mole",
+   "constant": true
+  },
+  {
+   "name": "mL_per_L",
+   "value": 1000.0,
+   "units": "milliliter/liter",
+   "constant": true
+  },
+  {
+   "name": "Vm_cl",
+   "value": 0.0,
+   "units": "nanomole/liter/day",
+   "constant": true
+  },
+  {
+   "name": "Km_cl",
+   "value": 1.0,
+   "units": "nanomole/liter",
+   "constant": true
+  },
+  {
+   "name": "kabs",
+   "value": 1.0,
+   "units": "1/day",
+   "constant": true
+  },
+  {
+   "name": "F",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "mg_per_g",
+   "value": 1000.0,
+   "units": "milligram/gram",
+   "constant": true
+  },
+  {
+   "name": "Thalf_mR1",
+   "value": 1.0,
+   "units": "day",
+   "constant": true
+  },
+  {
+   "name": "Thalf_mR2",
+   "value": 1.0,
+   "units": "day",
+   "constant": true
+  },
+  {
+   "name": "Thalf_sR1",
+   "value": 1.0,
+   "units": "day",
+   "constant": true
+  },
+  {
+   "name": "Thalf_sR2",
+   "value": 1.0,
+   "units": "day",
+   "constant": true
+  },
+  {
+   "name": "FLAG_soluble_target_trafficking_with_drug",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "FLAG_saturable_clearance",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "kon_R1_homodimer",
+   "value": 0.0,
+   "units": "1/(nM*day)",
+   "constant": true
+  },
+  {
+   "name": "ug_per_g",
+   "value": 1000000.0,
+   "units": "microgram/gram",
+   "constant": true
+  },
+  {
+   "name": "dose_on_off",
+   "value": 0.0,
+   "units": "",
+   "constant": false
+  },
+  {
+   "name": "dose_time",
+   "value": 0.0,
+   "units": "",
+   "constant": false
+  },
+  {
+   "name": "start_time_0",
+   "value": 1e-12,
+   "units": "day",
+   "constant": true
+  },
+  {
+   "name": "sR1_fc_CL",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "sR2_fc_CL",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "avg_sR1_sR2_fc_CL",
+   "value": 1.0,
+   "units": "dimensionless",
+   "constant": true
+  },
+  {
+   "name": "Vchi",
+   "value": 1.76e-08,
+   "units": "milliliter/cell",
+   "constant": true
+  },
+  {
+   "name": "FLAG_Avidity",
+   "value": 0.0,
+   "units": "dimensionless",
+   "constant": true
+  }
+ ],
+ "rules": [
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_cen_ugml = D1_cen*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "L_lea = f_lea*L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "L_tig = f_tig*L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "L_eff = f_eff*L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "L_saf = f_saf*L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR1_cen = mR1_0_cen*kdeg_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR1_lea = mR1_0_lea*kdeg_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR1_tig = mR1_0_tig*kdeg_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR1_eff = mR1_0_eff*kdeg_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR1_saf = mR1_0_saf*kdeg_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR2_cen = mR2_0_cen*kdeg_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR2_lea = mR2_0_lea*kdeg_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR2_tig = mR2_0_tig*kdeg_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR2_eff = mR2_0_eff*kdeg_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_mR2_saf = mR2_0_saf*kdeg_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR1_cen = sR1_0_cen*kdeg_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR1_lea = sR1_0_lea * kdeg_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR1_tig = sR1_0_tig * kdeg_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR1_eff = sR1_0_eff * kdeg_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR1_saf = sR1_0_saf * kdeg_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR2_cen = sR2_0_cen*kdeg_sR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR2_lea = sR2_0_lea * kdeg_sR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR2_tig = sR2_0_tig * kdeg_sR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR2_eff = sR2_0_eff * kdeg_sR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "ksyn_sR2_saf = sR2_0_saf * kdeg_sR2",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_lea_ugml = D1_lea*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_tig_ugml = D1_tig*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_eff_ugml = D1_eff*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_saf_ugml = D1_saf*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "D1_lym_ugml = D1_lym*MWab/1e6",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR1_cen = 100*(1 - (mR1_cen+1e-20)/(mR1_0_cen+1e-20))",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_cen = mR1_0_cen",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_lea = mR1_0_lea",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_tig = mR1_0_tig",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_eff = mR1_0_eff",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_saf = mR1_0_saf",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_cen = mR2_0_cen",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_lea = mR2_0_lea",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_tig = mR2_0_tig",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_eff = mR2_0_eff",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_saf = mR2_0_saf",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR1_cen = sR1_0_cen",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR1_lea = sR1_0_lea",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR1_tig = sR1_0_tig",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR1_eff = sR1_0_eff",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR1_saf = sR1_0_saf",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR2_cen = sR2_0_cen",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR2_lea = sR2_0_lea",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR2_tig = sR2_0_tig",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR2_eff = sR2_0_eff",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "sR2_saf = sR2_0_saf",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR2_cen = 100*(1 - (mR2_cen+1e-20)/(mR2_0_cen+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR1_tig = 100*(1 - (mR1_tig+1e-20)/(mR1_0_tig+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR2_tig = 100*(1 - (mR2_tig+1e-20)/(mR2_0_tig+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR1_lea = 100*(1 - (mR1_lea+1e-20)/(mR1_0_lea+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR2_lea = 100*(1 - (mR2_lea+1e-20)/(mR2_0_lea+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR1_eff = 100*(1 - (mR1_eff+1e-20)/(mR1_0_eff+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR2_eff = 100*(1 - (mR2_eff+1e-20)/(mR2_0_eff+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR1_saf = 100*(1 - (mR1_saf+1e-20)/(mR1_0_saf+1e-20))",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "RO_mR2_saf = 100*(1 - (mR2_saf+1e-20)/(mR2_0_saf+1e-20))",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_0_cen = mR1_cellspermL_cen * rpc_mR1_cen / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_0_cen = mR2_cellspermL_cen * rpc_mR2_cen / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_0_tig = mR1_cellspermL_tig * rpc_mR1_tig / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_0_tig = mR2_cellspermL_tig * rpc_mR2_tig / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_0_lea = mR1_cellspermL_lea * rpc_mR1_lea / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_0_lea = mR2_cellspermL_lea * rpc_mR2_lea / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_0_eff = mR1_cellspermL_eff * rpc_mR1_eff / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_0_eff = mR2_cellspermL_eff * rpc_mR2_eff / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_0_saf = mR1_cellspermL_saf * rpc_mR1_saf / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR2_0_saf = mR2_cellspermL_saf * rpc_mR2_saf / Nav * nmol_per_mol * mL_per_L",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "kdeg_mR1 = log(2)/Thalf_mR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "kdeg_mR2 = log(2)/Thalf_mR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "kdeg_sR1 = log(2)/Thalf_sR1",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "kdeg_sR2 = log(2)/Thalf_sR2",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "kon_R1_homodimer = 2*kon_R1",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_cen_nmol = CL_D1_NS_nmol+CL_D1_TMDD_R1_cen_nmol+CL_D1_TMDD_R2_cen_nmol",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_tig_nmol = CL_D1_TMDD_R1_tig_nmol+CL_D1_TMDD_R2_tig_nmol",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_lea_nmol = CL_D1_TMDD_R1_lea_nmol+CL_D1_TMDD_R2_lea_nmol",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_eff_nmol = CL_D1_TMDD_R1_eff_nmol+CL_D1_TMDD_R2_eff_nmol",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R1_saf_nmol = (mR1_fcint*kdeg_mR1*(D1_mR1_saf+D1_mR1_mR2_saf+2*D1_mR1_mR1_saf+D1_mR1_sR1_saf+D1_mR1_sR2_saf))*V_saf/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R2_saf_nmol = (mR2_fcint*kdeg_mR2*(D1_mR2_saf+D1_mR1_mR2_saf))*V_saf/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_saf_nmol = CL_D1_TMDD_R1_saf_nmol+CL_D1_TMDD_R2_saf_nmol",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "CL_D1_tot_nmol = CL_D1_tot_cen_nmol+CL_D1_tot_tig_nmol+CL_D1_tot_lea_nmol+CL_D1_tot_eff_nmol+CL_D1_tot_saf_nmol",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_NS_nmol = (CLp/V_cen*D1_cen+FLAG_saturable_clearance*Vm_cl*D1_cen/(Km_cl+D1_cen))*V_cen/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R1_cen_nmol = (mR1_fcint*kdeg_mR1*(D1_mR1_cen+D1_mR1_mR2_cen+2*D1_mR1_mR1_cen+D1_mR1_sR1_cen+D1_mR1_sR2_cen)+(CLp/V_cen)*(D1_sR1_cen+D1_sR1_sR1_cen+D1_sR1_sR2_cen)+FLAG_saturable_clearance*Vm_cl*(D1_sR1_cen/(Km_cl+D1_sR1_cen)+D1_sR1_sR1_cen/(Km_cl+D1_sR1_sR1_cen)+D1_sR1_sR2_cen/(Km_cl+D1_sR1_sR2_cen)))*V_cen/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R2_cen_nmol = (mR2_fcint*kdeg_mR2*(D1_mR2_cen+D1_mR1_mR2_cen)+(CLp/V_cen)*D1_sR2_cen+FLAG_saturable_clearance*Vm_cl*D1_sR2_cen/(Km_cl+D1_sR2_cen))*V_cen/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R1_tig_nmol = (mR1_fcint*kdeg_mR1*(D1_mR1_tig+D1_mR1_mR2_tig+2*D1_mR1_mR1_tig+D1_mR1_sR1_tig+D1_mR1_sR2_tig))*V_tig/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R2_tig_nmol = (mR2_fcint*kdeg_mR2*(D1_mR2_tig+D1_mR1_mR2_tig))*V_tig/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R1_lea_nmol = (mR1_fcint*kdeg_mR1*(D1_mR1_lea+D1_mR1_mR2_lea+2*D1_mR1_mR1_lea+D1_mR1_sR1_lea+D1_mR1_sR2_lea))*V_lea/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R2_lea_nmol = (mR2_fcint*kdeg_mR2*(D1_mR2_lea+D1_mR1_mR2_lea))*V_lea/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R1_eff_nmol = (mR1_fcint*kdeg_mR1*(D1_mR1_eff+D1_mR1_mR2_eff+2*D1_mR1_mR1_eff+D1_mR1_sR1_eff+D1_mR1_sR2_eff))*V_eff/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "CL_D1_TMDD_R2_eff_nmol = (mR2_fcint*kdeg_mR2*(D1_mR2_eff+D1_mR1_mR2_eff))*V_eff/mL_per_L*BW",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_cen_2_tig = transport_between_compartments(D1_cen,sig_tig,L_tig,V_cen)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_tig_2_lym = transport_between_compartments(D1_tig,sig_lym,L_tig,V_tig)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_lym_2_cen = transport_between_compartments(D1_lym,0,L,V_lym)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_cen_2_lea = transport_between_compartments(D1_cen,sig_lea,L_lea,V_cen)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_lea_2_lym = transport_between_compartments(D1_lea,sig_lym,L_lea,V_lea)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_cen_2_eff = transport_between_compartments(D1_cen,sig_eff,L_eff,V_cen)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_eff_2_lym = transport_between_compartments(D1_eff,sig_lym,L_eff,V_eff)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_cen_2_saf = transport_between_compartments(D1_cen,sig_saf,L_saf,V_cen)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_saf_2_lym = transport_between_compartments(D1_saf,sig_lym,L_saf,V_saf)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_D1_cen = D1_cen + D1_sR1_cen + D1_sR2_cen + D1_sR1_sR1_cen + D1_sR1_sR2_cen",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_D1_cen_ugml = total_D1_cen/nmol_per_mol*MWab*ug_per_g/mL_per_L",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "rate_D1_ext_2_cen_mg_per_day = F*kabs*D1_ext_mg",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR1_cen = sR1_cen + D1_sR1_cen + 2*D1_sR1_sR1_cen + D1_sR1_sR2_cen + D1_mR1_sR1_cen",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR2_cen = sR2_cen + D1_sR1_sR2_cen + D1_mR1_sR2_cen + D1_sR2_cen",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "mR1_cellspermL_tig = mR1_cellspermL_lea",
+   "active": true
+  },
+  {
+   "type": "initialAssignment",
+   "rule": "rpc_mR1_tig = rpc_mR1_lea",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "trimer_per_mR1_cell = D1_mR1_mR2_cen / nmol_per_mol * Nav / mL_per_L / mR1_cellspermL_cen",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "trimer_per_mR2_cell = D1_mR1_mR2_cen/nmol_per_mol*Nav/mL_per_L/mR2_cellspermL_cen",
+   "active": true
+  },
+  {
+   "type": "rate",
+   "rule": "AUC_cen = D1_cen_ugml",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR2_lea = sR2_lea + D1_sR1_sR2_lea + D1_mR1_sR2_lea + D1_sR2_lea",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR2_tig = sR2_tig + D1_sR1_sR2_tig + D1_mR1_sR2_tig + D1_sR2_tig",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR1_lea = sR1_lea + D1_sR1_lea + 2*D1_sR1_sR1_lea + D1_sR1_sR2_lea + D1_mR1_sR1_lea",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "total_sR1_tig = sR1_tig + D1_sR1_tig + 2*D1_sR1_sR1_tig + D1_sR1_sR2_tig + D1_mR1_sR1_tig",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR1_cen = 100*(sR1_cen+1e-20)/(sR1_0_cen+1e-20)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR2_cen = 100*(sR2_cen+1e-20)/(sR2_0_cen+1e-20)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR1_lea = 100*(sR1_lea+1e-20)/(sR1_0_lea+1e-20)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR2_lea = 100*(sR2_lea+1e-20)/(sR2_0_lea+1e-20)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR1_tig = 100*(sR1_tig+1e-20)/(sR1_0_tig+1e-20)",
+   "active": true
+  },
+  {
+   "type": "repeatedAssignment",
+   "rule": "TN_sR2_tig = 100*(sR2_tig+1e-20)/(sR2_0_tig+1e-20)",
+   "active": true
+  }
+ ],
+ "reactions": [
+  {
+   "name": "targetA_central_syn",
+   "reaction": "null -> mR1_cen",
+   "rate": "ksyn_mR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_3",
+   "reaction": "mR1_cen -> null",
+   "rate": "kdeg_mR1*mR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_4",
+   "reaction": "null -> mR2_cen",
+   "rate": "ksyn_mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_5",
+   "reaction": "mR2_cen -> null",
+   "rate": "kdeg_mR2*mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_1",
+   "reaction": "D1_cen -> null",
+   "rate": "rate_D1_cen_2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_2",
+   "reaction": "D1_cen -> null",
+   "rate": "rate_D1_cen_2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_7",
+   "reaction": "D1_tig -> null",
+   "rate": "rate_D1_tig_2_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_8",
+   "reaction": "D1_lea -> null",
+   "rate": "rate_D1_lea_2_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_17",
+   "reaction": "mR2_cen + D1_cen <-> D1_mR2_cen",
+   "rate": "kon_R2*D1_cen*mR2_cen-kon_R2*Kd_R2*D1_mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_18",
+   "reaction": "D1_cen + mR1_cen <-> D1_mR1_cen",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*D1_cen*mR1_cen-kon_R1*Kd_R1*D1_mR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_23",
+   "reaction": "D1_mR1_cen + mR2_cen <-> D1_mR1_mR2_cen",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR1_cen,mR2_cen,D1_mR1_mR2_cen,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_cen)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24",
+   "reaction": "mR1_cen + D1_mR2_cen <-> D1_mR1_mR2_cen",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR2_cen,mR1_cen,D1_mR1_mR2_cen,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_cen)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_29",
+   "reaction": "D1_mR1_cen -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_30",
+   "reaction": "D1_mR2_cen -> null",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_35",
+   "reaction": "D1_mR1_mR2_cen -> mR2_cen",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_2",
+   "reaction": "D1_mR1_mR2_cen -> mR1_cen",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR1_mR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_37",
+   "reaction": "D1_lym -> null",
+   "rate": "rate_D1_lym_2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_2_1",
+   "reaction": "D1_cen -> null",
+   "rate": "rate_D1_cen_2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_8_1",
+   "reaction": "D1_eff -> null",
+   "rate": "rate_D1_eff_2_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_36",
+   "reaction": "D1_cen -> null",
+   "rate": "CLp/V_cen*D1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_2_1_1",
+   "reaction": "D1_cen -> null",
+   "rate": "rate_D1_cen_2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_8_1_1",
+   "reaction": "D1_saf -> null",
+   "rate": "[rate_D1_saf_2_lym]",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1",
+   "reaction": "D1_cen + sR1_cen <-> D1_sR1_cen",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*(D1_cen*sR1_cen-Kd_R1*D1_sR1_cen))",
+   "active": true
+  },
+  {
+   "name": "Reaction_6",
+   "reaction": "D1_cen + sR2_cen <-> D1_sR2_cen",
+   "rate": "kon_R2*D1_cen*sR2_cen-kon_R2*Kd_R2*D1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_38",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "sR1_fc_CL*CLp/V_cen*D1_sR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_38_1",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "sR2_fc_CL*CLp/V_cen*D1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1",
+   "reaction": "sR2_cen + D1_sR1_cen <-> D1_sR1_sR2_cen",
+   "rate": "kon_R2*D1_sR1_cen*sR2_cen-kon_R2*Kd_R2*D1_sR1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_1",
+   "reaction": "D1_sR2_cen + sR1_cen <-> D1_sR1_sR2_cen",
+   "rate": "kon_R1*D1_sR2_cen*sR1_cen-kon_R1*Kd_R1*D1_sR1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_38_2",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "avg_sR1_sR2_fc_CL*CLp/V_cen*D1_sR1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1",
+   "reaction": "null -> sR1_cen",
+   "rate": "ksyn_sR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1",
+   "reaction": "sR1_cen -> null",
+   "rate": "kdeg_sR1*sR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_1",
+   "reaction": "null -> sR2_cen",
+   "rate": "ksyn_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_1",
+   "reaction": "sR2_cen -> null",
+   "rate": "kdeg_sR2*sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2",
+   "reaction": "D1_mR1_cen + sR2_cen <-> D1_mR1_sR2_cen",
+   "rate": "kon_R2*(D1_mR1_cen*sR2_cen-Kd_R2*D1_mR1_sR2_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1",
+   "reaction": "D1_mR1_sR2_cen -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR2_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1",
+   "reaction": "D1_sR2_cen + mR1_cen <-> D1_mR1_sR2_cen",
+   "rate": "kon_R1*(D1_sR2_cen*mR1_cen-Kd_R1*D1_mR1_sR2_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_3",
+   "reaction": "D1_mR1_cen + mR1_cen <-> D1_mR1_mR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*((1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_cen)-1))*kon_R1*D1_mR1_cen*mR1_cen-kon_R1_homodimer*Kd_R1*D1_mR1_mR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1",
+   "reaction": "D1_mR1_mR1_cen -> mR1_cen",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_1",
+   "reaction": "D1_mR1_mR1_cen -> mR1_cen",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_1",
+   "reaction": "D1_mR1_cen + mR2_cen <-> D1_mR1_mR2_cen",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR1_cen,mR2_cen,D1_mR1_mR2_cen,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_cen)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_1",
+   "reaction": "mR1_cen + D1_mR2_cen <-> D1_mR1_mR2_cen",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR2_cen,mR1_cen,D1_mR1_mR2_cen,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_cen)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_36_1",
+   "reaction": "D1_cen -> null",
+   "rate": "FLAG_saturable_clearance*Vm_cl*D1_cen/(Km_cl+D1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_36_1_1",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "sR2_fc_CL*FLAG_saturable_clearance*Vm_cl*D1_sR2_cen/(Km_cl+D1_sR2_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_36_1_1_1",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "sR1_fc_CL*FLAG_saturable_clearance*Vm_cl*D1_sR1_cen/(Km_cl+D1_sR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_36_1_1_1_1",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "avg_sR1_sR2_fc_CL*FLAG_saturable_clearance*Vm_cl*D1_sR1_sR2_cen/(Km_cl+D1_sR1_sR2_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_37_1",
+   "reaction": "D1_sR1_lym -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_lym,0,L,V_lym)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_tig,L_tig,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2",
+   "reaction": "null -> D1_sR1_lea",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_lea,L_lea,V_cen)*V_cen/V_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_saf,L_saf,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_3",
+   "reaction": "D1_mR1_cen + sR1_cen <-> D1_mR1_sR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_mR1_cen*sR1_cen-Kd_R1*D1_mR1_sR1_cen))",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_2",
+   "reaction": "D1_mR1_sR1_cen -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_2",
+   "reaction": "D1_sR1_cen + mR1_cen <-> D1_mR1_sR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_sR1_cen*mR1_cen-Kd_R1*D1_mR1_sR1_cen))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_4",
+   "reaction": "D1_cen + mR1_cen <-> D1_mR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_cen*mR1_cen-kon_R1*Kd_R1*D1_mR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_2",
+   "reaction": "D1_cen + sR1_cen <-> D1_sR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_cen*sR1_cen-kon_R1*Kd_R1*D1_sR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_3",
+   "reaction": "sR1_cen + D1_sR1_cen <-> D1_sR1_sR1_cen",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*D1_sR1_cen*sR1_cen-kon_R1_homodimer*Kd_R1*D1_sR1_sR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_38_2_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "sR1_fc_CL*CLp/V_cen*D1_sR1_sR1_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_36_1_1_1_1_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "sR1_fc_CL*FLAG_saturable_clearance*Vm_cl*D1_sR1_sR1_cen/(Km_cl+D1_sR1_sR1_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_2",
+   "reaction": "null -> D1_tig",
+   "rate": "rate_D1_cen_2_tig*V_cen/V_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_40",
+   "reaction": "null -> D1_lym",
+   "rate": "rate_D1_tig_2_lym*V_tig/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_41",
+   "reaction": "null -> D1_cen",
+   "rate": "rate_D1_lym_2_cen*V_lym/V_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_42",
+   "reaction": "null -> D1_lea",
+   "rate": "rate_D1_cen_2_lea*V_cen/V_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_43",
+   "reaction": "null -> D1_lym",
+   "rate": "rate_D1_lea_2_lym*V_lea/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_44",
+   "reaction": "null -> D1_eff",
+   "rate": "rate_D1_cen_2_eff*V_cen/V_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_45",
+   "reaction": "null -> D1_saf",
+   "rate": "rate_D1_cen_2_saf*V_cen/V_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_46",
+   "reaction": "null -> D1_lym",
+   "rate": "rate_D1_saf_2_lym*V_saf/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_47",
+   "reaction": "null -> D1_lym",
+   "rate": "rate_D1_eff_2_lym*V_eff/V_lym",
+   "active": true
+  },
+  {
+   "name": "targetA_central_syn_1",
+   "reaction": "null -> mR1_tig",
+   "rate": "ksyn_mR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_3_1",
+   "reaction": "mR1_tig -> null",
+   "rate": "kdeg_mR1*mR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_2",
+   "reaction": "null -> mR2_tig",
+   "rate": "ksyn_mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_2",
+   "reaction": "mR2_tig -> null",
+   "rate": "kdeg_mR2*mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_17_1",
+   "reaction": "mR2_tig + D1_tig <-> D1_mR2_tig",
+   "rate": "kon_R2*D1_tig*mR2_tig-kon_R2*Kd_R2*D1_mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_5",
+   "reaction": "D1_tig + mR1_tig <-> D1_mR1_tig",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*D1_tig*mR1_tig-kon_R1*Kd_R1*D1_mR1_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_2",
+   "reaction": "D1_mR1_tig + mR2_tig <-> D1_mR1_mR2_tig",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR1_tig,mR2_tig,D1_mR1_mR2_tig,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_tig)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_2",
+   "reaction": "mR1_tig + D1_mR2_tig <-> D1_mR1_mR2_tig",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR2_tig,mR1_tig,D1_mR1_mR2_tig,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_tig)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_2",
+   "reaction": "D1_mR1_tig -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_2",
+   "reaction": "D1_mR2_tig -> null",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_1",
+   "reaction": "D1_mR1_mR2_tig -> mR2_tig",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_2_1",
+   "reaction": "D1_mR1_mR2_tig -> mR1_tig",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR1_mR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_3",
+   "reaction": "D1_tig + sR1_tig <-> D1_sR1_tig",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*(D1_tig*sR1_tig-Kd_R1*D1_sR1_tig))",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_3",
+   "reaction": "D1_tig + sR2_tig <-> D1_sR2_tig",
+   "rate": "kon_R2*D1_tig*sR2_tig-kon_R2*Kd_R2*D1_sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_4",
+   "reaction": "sR2_tig + D1_sR1_tig <-> D1_sR1_sR2_tig",
+   "rate": "kon_R2*D1_sR1_tig*sR2_tig-kon_R2*Kd_R2*D1_sR1_sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_1_2",
+   "reaction": "D1_sR2_tig + sR1_tig <-> D1_sR1_sR2_tig",
+   "rate": "kon_R1*D1_sR2_tig*sR1_tig-kon_R1*Kd_R1*D1_sR1_sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_3",
+   "reaction": "null -> sR1_tig",
+   "rate": "ksyn_sR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_3",
+   "reaction": "sR1_tig -> null",
+   "rate": "kdeg_sR1*sR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_1_2",
+   "reaction": "null -> sR2_tig",
+   "rate": "ksyn_sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_1_2",
+   "reaction": "sR2_tig -> null",
+   "rate": "kdeg_sR2*sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_4",
+   "reaction": "D1_mR1_tig + sR2_tig <-> D1_mR1_sR2_tig",
+   "rate": "kon_R2*(D1_mR1_tig*sR2_tig-Kd_R2*D1_mR1_sR2_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_3",
+   "reaction": "D1_mR1_sR2_tig -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR2_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_3",
+   "reaction": "D1_sR2_tig + mR1_tig <-> D1_mR1_sR2_tig",
+   "rate": "kon_R1*(D1_sR2_tig*mR1_tig-Kd_R1*D1_mR1_sR2_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_3_2",
+   "reaction": "D1_mR1_tig + mR1_tig <-> D1_mR1_mR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*((1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_tig)-1))*kon_R1*D1_mR1_tig*mR1_tig-kon_R1_homodimer*Kd_R1*D1_mR1_mR1_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_3",
+   "reaction": "D1_mR1_mR1_tig -> mR1_tig",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_1_2",
+   "reaction": "D1_mR1_mR1_tig -> mR1_tig",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_1_1",
+   "reaction": "D1_mR1_tig + mR2_tig <-> D1_mR1_mR2_tig",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR1_tig,mR2_tig,D1_mR1_mR2_tig,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_tig)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_1_1",
+   "reaction": "mR1_tig + D1_mR2_tig <-> D1_mR1_mR2_tig",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR2_tig,mR1_tig,D1_mR1_mR2_tig,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_tig)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_3_2",
+   "reaction": "D1_mR1_tig + sR1_tig <-> D1_mR1_sR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_mR1_tig*sR1_tig-Kd_R1*D1_mR1_sR1_tig))",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_2_2",
+   "reaction": "D1_mR1_sR1_tig -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR1_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_2_2",
+   "reaction": "D1_sR1_tig + mR1_tig <-> D1_mR1_sR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_sR1_tig*mR1_tig-Kd_R1*D1_mR1_sR1_tig))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_4_1",
+   "reaction": "D1_tig + mR1_tig <-> D1_mR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_tig*mR1_tig-kon_R1*Kd_R1*D1_mR1_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_2_1",
+   "reaction": "D1_tig + sR1_tig <-> D1_sR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_tig*sR1_tig-kon_R1*Kd_R1*D1_sR1_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_3_2",
+   "reaction": "sR1_tig + D1_sR1_tig <-> D1_sR1_sR1_tig",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*D1_sR1_tig*sR1_tig-kon_R1_homodimer*Kd_R1*D1_sR1_sR1_tig)",
+   "active": true
+  },
+  {
+   "name": "targetA_central_syn_1_1",
+   "reaction": "null -> mR1_lea",
+   "rate": "ksyn_mR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_3_1_1",
+   "reaction": "mR1_lea -> null",
+   "rate": "kdeg_mR1*mR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_2_1",
+   "reaction": "null -> mR2_lea",
+   "rate": "ksyn_mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_2_1",
+   "reaction": "mR2_lea -> null",
+   "rate": "kdeg_mR2*mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_17_1_1",
+   "reaction": "mR2_lea + D1_lea <-> D1_mR2_lea",
+   "rate": "kon_R2*D1_lea*mR2_lea-kon_R2*Kd_R2*D1_mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_5_1",
+   "reaction": "D1_lea + mR1_lea <-> D1_mR1_lea",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*D1_lea*mR1_lea-kon_R1*Kd_R1*D1_mR1_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_2_1",
+   "reaction": "D1_mR1_lea + mR2_lea <-> D1_mR1_mR2_lea",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR1_lea,mR2_lea,D1_mR1_mR2_lea,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_lea)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_2_1",
+   "reaction": "mR1_lea + D1_mR2_lea <-> D1_mR1_mR2_lea",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR2_lea,mR1_lea,D1_mR1_mR2_lea,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_lea)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_2_1",
+   "reaction": "D1_mR1_lea -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_2_1",
+   "reaction": "D1_mR2_lea -> null",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_1_1",
+   "reaction": "D1_mR1_mR2_lea -> mR2_lea",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_2_1_1",
+   "reaction": "D1_mR1_mR2_lea -> mR1_lea",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR1_mR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_3_1",
+   "reaction": "D1_lea + sR1_lea <-> D1_sR1_lea",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*(D1_lea*sR1_lea-Kd_R1*D1_sR1_lea))",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_3_1",
+   "reaction": "D1_lea + sR2_lea <-> D1_sR2_lea",
+   "rate": "kon_R2*D1_lea*sR2_lea-kon_R2*Kd_R2*D1_sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_4_1",
+   "reaction": "sR2_lea + D1_sR1_lea <-> D1_sR1_sR2_lea",
+   "rate": "kon_R2*D1_sR1_lea*sR2_lea-kon_R2*Kd_R2*D1_sR1_sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_1_2_1",
+   "reaction": "D1_sR2_lea + sR1_lea <-> D1_sR1_sR2_lea",
+   "rate": "kon_R1*D1_sR2_lea*sR1_lea-kon_R1*Kd_R1*D1_sR1_sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_3_1",
+   "reaction": "null -> sR1_lea",
+   "rate": "ksyn_sR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_3_1",
+   "reaction": "sR1_lea -> null",
+   "rate": "kdeg_sR1*sR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_1_2_1",
+   "reaction": "null -> sR2_lea",
+   "rate": "ksyn_sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_1_2_1",
+   "reaction": "sR2_lea -> null",
+   "rate": "kdeg_sR2*sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_4_1",
+   "reaction": "D1_mR1_lea + sR2_lea <-> D1_mR1_sR2_lea",
+   "rate": "kon_R2*(D1_mR1_lea*sR2_lea-Kd_R2*D1_mR1_sR2_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_3_1",
+   "reaction": "D1_mR1_sR2_lea -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR2_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_3_1",
+   "reaction": "mR1_lea + D1_sR2_lea <-> D1_mR1_sR2_lea",
+   "rate": "kon_R1*(D1_sR2_lea*mR1_lea-Kd_R1*D1_mR1_sR2_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_3_2_1",
+   "reaction": "D1_mR1_lea + mR1_lea <-> D1_mR1_mR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*((1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_lea)-1))*kon_R1*D1_mR1_lea*mR1_lea-kon_R1_homodimer*Kd_R1*D1_mR1_mR1_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_3_1",
+   "reaction": "D1_mR1_mR1_lea -> mR1_lea",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_1_2_1",
+   "reaction": "D1_mR1_mR1_lea -> mR1_lea",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_1_1_1",
+   "reaction": "D1_mR1_lea + mR2_lea <-> D1_mR1_mR2_lea",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR1_lea,mR2_lea,D1_mR1_mR2_lea,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_lea)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_1_1_1",
+   "reaction": "mR1_lea + D1_mR2_lea <-> D1_mR1_mR2_lea",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR2_lea,mR1_lea,D1_mR1_mR2_lea,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_lea)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_3_2_1",
+   "reaction": "D1_mR1_lea + sR1_lea <-> D1_mR1_sR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_mR1_lea*sR1_lea-Kd_R1*D1_mR1_sR1_lea))",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_2_2_1",
+   "reaction": "D1_mR1_sR1_lea -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR1_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_2_2_1",
+   "reaction": "D1_sR1_lea + mR1_lea <-> D1_mR1_sR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_sR1_lea*mR1_lea-Kd_R1*D1_mR1_sR1_lea))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_4_1_1",
+   "reaction": "D1_lea + mR1_lea <-> D1_mR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_lea*mR1_lea-kon_R1*Kd_R1*D1_mR1_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_2_1_1",
+   "reaction": "D1_lea + sR1_lea <-> D1_sR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_lea*sR1_lea-kon_R1*Kd_R1*D1_sR1_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_3_2_1",
+   "reaction": "sR1_lea + D1_sR1_lea <-> D1_sR1_sR1_lea",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*D1_sR1_lea*sR1_lea-kon_R1_homodimer*Kd_R1*D1_sR1_sR1_lea)",
+   "active": true
+  },
+  {
+   "name": "targetA_central_syn_1_1_1",
+   "reaction": "null -> mR1_eff",
+   "rate": "ksyn_mR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_3_1_1_1",
+   "reaction": "mR1_eff -> null",
+   "rate": "kdeg_mR1*mR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_2_1_1",
+   "reaction": "null -> mR2_eff",
+   "rate": "ksyn_mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_2_1_1",
+   "reaction": "mR2_eff -> null",
+   "rate": "kdeg_mR2*mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_17_1_1_1",
+   "reaction": "mR2_eff + D1_eff <-> D1_mR2_eff",
+   "rate": "kon_R2*D1_eff*mR2_eff-kon_R2*Kd_R2*D1_mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_5_1_1",
+   "reaction": "D1_eff + mR1_eff <-> D1_mR1_eff",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*D1_eff*mR1_eff-kon_R1*Kd_R1*D1_mR1_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_2_1_1",
+   "reaction": "D1_mR1_eff + mR2_eff <-> D1_mR1_mR2_eff",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR1_eff,mR2_eff,D1_mR1_mR2_eff,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_eff)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_2_1_1",
+   "reaction": "mR1_eff + D1_mR2_eff <-> D1_mR1_mR2_eff",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR2_eff,mR1_eff,D1_mR1_mR2_eff,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_eff)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_2_1_1",
+   "reaction": "D1_mR1_eff -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_2_1_1",
+   "reaction": "D1_mR2_eff -> null",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_1_1_1",
+   "reaction": "D1_mR1_mR2_eff -> mR2_eff",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_2_1_1_1",
+   "reaction": "D1_mR1_mR2_eff -> mR1_eff",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR1_mR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_3_1_1",
+   "reaction": "D1_eff + sR1_eff <-> D1_sR1_eff",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*(D1_eff*sR1_eff-Kd_R1*D1_sR1_eff))",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_3_1_1",
+   "reaction": "D1_eff + sR2_eff <-> D1_sR2_eff",
+   "rate": "kon_R2*D1_eff*sR2_eff-kon_R2*Kd_R2*D1_sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_4_1_1",
+   "reaction": "sR2_eff + D1_sR1_eff <-> D1_sR1_sR2_eff",
+   "rate": "kon_R2*D1_sR1_eff*sR2_eff-kon_R2*Kd_R2*D1_sR1_sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_1_2_1_1",
+   "reaction": "D1_sR2_eff + sR1_eff <-> D1_sR1_sR2_eff",
+   "rate": "kon_R1*D1_sR2_eff*sR1_eff-kon_R1*Kd_R1*D1_sR1_sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_3_1_1",
+   "reaction": "null -> sR1_eff",
+   "rate": "ksyn_sR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_3_1_1",
+   "reaction": "sR1_eff -> null",
+   "rate": "kdeg_sR1*sR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_1_2_1_1",
+   "reaction": "null -> sR2_eff",
+   "rate": "ksyn_sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_1_2_1_1",
+   "reaction": "sR2_eff -> null",
+   "rate": "kdeg_sR2*sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_4_1_1",
+   "reaction": "D1_mR1_eff + sR2_eff <-> D1_mR1_sR2_eff",
+   "rate": "kon_R2*(D1_mR1_eff*sR2_eff-Kd_R2*D1_mR1_sR2_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_3_1_1",
+   "reaction": "D1_mR1_sR2_eff -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR2_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_3_1_1",
+   "reaction": "D1_sR2_eff + mR1_eff <-> D1_mR1_sR2_eff",
+   "rate": "kon_R1*(D1_sR2_eff*mR1_eff-Kd_R1*D1_mR1_sR2_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_3_2_1_1",
+   "reaction": "mR1_eff + D1_mR1_eff <-> D1_mR1_mR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*((1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_eff)-1))*kon_R1*D1_mR1_eff*mR1_eff-kon_R1_homodimer*Kd_R1*D1_mR1_mR1_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_3_1_1",
+   "reaction": "D1_mR1_mR1_eff -> mR1_eff",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_1_2_1_1",
+   "reaction": "D1_mR1_mR1_eff -> mR1_eff",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_1_1_1_1",
+   "reaction": "D1_mR1_eff + mR2_eff <-> D1_mR1_mR2_eff",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR1_eff,mR2_eff,D1_mR1_mR2_eff,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_eff)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_1_1_1_1",
+   "reaction": "mR1_eff + D1_mR2_eff <-> D1_mR1_mR2_eff",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR2_eff,mR1_eff,D1_mR1_mR2_eff,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_eff)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_3_2_1_1",
+   "reaction": "D1_mR1_eff + sR1_eff <-> D1_mR1_sR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_mR1_eff*sR1_eff-Kd_R1*D1_mR1_sR1_eff))",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_2_2_1_1",
+   "reaction": "D1_mR1_sR1_eff -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR1_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_2_2_1_1",
+   "reaction": "D1_sR1_eff + mR1_eff <-> D1_mR1_sR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_sR1_eff*mR1_eff-Kd_R1*D1_mR1_sR1_eff))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_4_1_1_1",
+   "reaction": "D1_eff + mR1_eff <-> D1_mR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_eff*mR1_eff-kon_R1*Kd_R1*D1_mR1_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_2_1_1_1",
+   "reaction": "D1_eff + sR1_eff <-> D1_sR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_eff*sR1_eff-kon_R1*Kd_R1*D1_sR1_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_3_2_1_1",
+   "reaction": "sR1_eff + D1_sR1_eff <-> D1_sR1_sR1_eff",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*D1_sR1_eff*sR1_eff-kon_R1_homodimer*Kd_R1*D1_sR1_sR1_eff)",
+   "active": true
+  },
+  {
+   "name": "targetA_central_syn_1_1_2",
+   "reaction": "null -> mR1_saf",
+   "rate": "ksyn_mR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_3_1_1_2",
+   "reaction": "mR1_saf -> null",
+   "rate": "kdeg_mR1*mR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_2_1_2",
+   "reaction": "null -> mR2_saf",
+   "rate": "ksyn_mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_2_1_2",
+   "reaction": "mR2_saf -> null",
+   "rate": "kdeg_mR2*mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_17_1_1_2",
+   "reaction": "mR2_saf + D1_saf <-> D1_mR2_saf",
+   "rate": "kon_R2*D1_saf*mR2_saf-kon_R2*Kd_R2*D1_mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_5_1_2",
+   "reaction": "D1_saf + mR1_saf <-> D1_mR1_saf",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*D1_saf*mR1_saf-kon_R1*Kd_R1*D1_mR1_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_2_1_2",
+   "reaction": "D1_mR1_saf + mR2_saf <-> D1_mR1_mR2_saf",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR1_saf,mR2_saf,D1_mR1_mR2_saf,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_saf)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_2_1_2",
+   "reaction": "mR1_saf + D1_mR2_saf <-> D1_mR1_mR2_saf",
+   "rate": "FLAG_CIS_BINDING*binding_on_off(D1_mR2_saf,mR1_saf,D1_mR1_mR2_saf,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_saf)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_2_1_2",
+   "reaction": "D1_mR1_saf -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_2_1_2",
+   "reaction": "D1_mR2_saf -> null",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_1_1_2",
+   "reaction": "D1_mR1_mR2_saf -> mR2_saf",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_35_2_1_1_2",
+   "reaction": "D1_mR1_mR2_saf -> mR1_saf",
+   "rate": "mR2_fcint*kdeg_mR2*D1_mR1_mR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_3_1_2",
+   "reaction": "D1_saf + sR1_saf <-> D1_sR1_saf",
+   "rate": "(1-FLAG_BIVALENT_BINDING)*(kon_R1*(D1_saf*sR1_saf-Kd_R1*D1_sR1_saf))",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_3_1_2",
+   "reaction": "D1_saf + sR2_saf <-> D1_sR2_saf",
+   "rate": "kon_R2*D1_saf*sR2_saf-kon_R2*Kd_R2*D1_sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_4_1_2",
+   "reaction": "sR2_saf + D1_sR1_saf <-> D1_sR1_sR2_saf",
+   "rate": "kon_R2*D1_sR1_saf*sR2_saf-kon_R2*Kd_R2*D1_sR1_sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_1_2_1_2",
+   "reaction": "D1_sR2_saf + sR1_saf <-> D1_sR1_sR2_saf",
+   "rate": "kon_R1*D1_sR2_saf*sR1_saf-kon_R1*Kd_R1*D1_sR1_sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_3_1_2",
+   "reaction": "null -> sR1_saf",
+   "rate": "ksyn_sR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_3_1_2",
+   "reaction": "sR1_saf -> null",
+   "rate": "kdeg_sR1*sR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_4_1_1_2_1_2",
+   "reaction": "null -> sR2_saf",
+   "rate": "ksyn_sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_5_1_1_2_1_2",
+   "reaction": "sR2_saf -> null",
+   "rate": "kdeg_sR2*sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_4_1_2",
+   "reaction": "D1_mR1_saf + sR2_saf <-> D1_mR1_sR2_saf",
+   "rate": "kon_R2*(D1_mR1_saf*sR2_saf-Kd_R2*D1_mR1_sR2_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_3_1_2",
+   "reaction": "D1_mR1_sR2_saf -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR2_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_3_1_2",
+   "reaction": "D1_sR2_saf + mR1_saf <-> D1_mR1_sR2_saf",
+   "rate": "kon_R1*(D1_sR2_saf*mR1_saf-Kd_R1*D1_mR1_sR2_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_3_2_1_2",
+   "reaction": "mR1_saf + D1_mR1_saf <-> D1_mR1_mR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*((1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_saf)-1))*kon_R1*D1_mR1_saf*mR1_saf-kon_R1_homodimer*Kd_R1*D1_mR1_mR1_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_3_1_2",
+   "reaction": "D1_mR1_mR1_saf -> mR1_saf",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_29_1_1_2_1_2",
+   "reaction": "D1_mR1_mR1_saf -> mR1_saf",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_mR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_23_1_1_1_2",
+   "reaction": "D1_mR1_saf + mR2_saf <-> D1_mR1_mR2_saf",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR1_saf,mR2_saf,D1_mR1_mR2_saf,kon_R2,Kd_R2,1,1+FLAG_Avidity*(avid_R2/(Vchi*mR2_cellspermL_saf)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_24_1_1_1_2",
+   "reaction": "mR1_saf + D1_mR2_saf <-> D1_mR1_mR2_saf",
+   "rate": "FLAG_TRANS_BINDING*binding_on_off(D1_mR2_saf,mR1_saf,D1_mR1_mR2_saf,kon_R1,Kd_R1,1,1+FLAG_Avidity*(avid_R1/(Vchi*mR1_cellspermL_saf)-1))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_3_2_1_2",
+   "reaction": "D1_mR1_saf + sR1_saf <-> D1_mR1_sR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_mR1_saf*sR1_saf-Kd_R1*D1_mR1_sR1_saf))",
+   "active": true
+  },
+  {
+   "name": "Reaction_30_1_2_2_1_2",
+   "reaction": "D1_mR1_sR1_saf -> null",
+   "rate": "mR1_fcint*kdeg_mR1*D1_mR1_sR1_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_2_1_2_2_1_2",
+   "reaction": "D1_sR1_saf + mR1_saf <-> D1_mR1_sR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*(D1_sR1_saf*mR1_saf-Kd_R1*D1_mR1_sR1_saf))",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_4_1_1_2",
+   "reaction": "D1_saf + mR1_saf <-> D1_mR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_saf*mR1_saf-kon_R1*Kd_R1*D1_mR1_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_18_1_2_1_1_2",
+   "reaction": "D1_saf + sR1_saf <-> D1_sR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1_homodimer*D1_saf*sR1_saf-kon_R1*Kd_R1*D1_sR1_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_6_1_3_2_1_2",
+   "reaction": "sR1_saf + D1_sR1_saf <-> D1_sR1_sR1_saf",
+   "rate": "FLAG_BIVALENT_BINDING*(kon_R1*D1_sR1_saf*sR1_saf-kon_R1_homodimer*Kd_R1*D1_sR1_sR1_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_9",
+   "reaction": "null -> D1_sR1_tig",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_tig,L_tig,V_cen)*V_cen/V_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_10",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_lea,L_lea,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_1",
+   "reaction": "D1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_eff,L_eff,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_11",
+   "reaction": "null -> D1_sR1_eff",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_eff,L_eff,V_cen)*V_cen/V_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_1",
+   "reaction": "null -> D1_sR1_saf",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_cen,sig_saf,L_saf,V_cen)*V_cen/V_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_7_1",
+   "reaction": "D1_sR1_tig -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_tig,sig_lym,L_tig,V_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_12",
+   "reaction": "null -> D1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_tig,sig_lym,L_tig,V_tig)*V_tig/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_13",
+   "reaction": "null -> D1_sR1_cen",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_lym,0,L,V_lym)*V_lym/V_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_14",
+   "reaction": "null -> D1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_eff,sig_lym,L_eff,V_eff)*V_eff/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_15",
+   "reaction": "D1_sR1_eff -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_eff,sig_lym,L_eff,V_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_16",
+   "reaction": "D1_sR1_lea -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_lea,sig_lym,L_lea,V_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_19",
+   "reaction": "null -> D1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_lea,sig_lym,L_lea,V_lea)*V_lea/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_20",
+   "reaction": "null -> D1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_saf,sig_lym,L_saf,V_saf)*V_saf/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_21",
+   "reaction": "D1_sR1_saf -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_saf,sig_lym,L_saf,V_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_37_1_1",
+   "reaction": "D1_sR2_lym -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_lym,0,L,V_lym)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_1",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_tig,L_tig,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1",
+   "reaction": "null -> D1_sR2_lea",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_lea,L_lea,V_cen)*V_cen/V_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_2",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_saf,L_saf,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_9_1",
+   "reaction": "null -> D1_sR2_tig",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_tig,L_tig,V_cen)*V_cen/V_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_10_1",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_lea,L_lea,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_1_1",
+   "reaction": "D1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_eff,L_eff,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_2",
+   "reaction": "null -> D1_sR2_eff",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_eff,L_eff,V_cen)*V_cen/V_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_1_1",
+   "reaction": "null -> D1_sR2_saf",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_cen,sig_saf,L_saf,V_cen)*V_cen/V_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_7_1_1",
+   "reaction": "D1_sR2_tig -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_tig,sig_lym,L_tig,V_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_12_1",
+   "reaction": "null -> D1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_tig,sig_lym,L_tig,V_tig)*V_tig/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_13_1",
+   "reaction": "null -> D1_sR2_cen",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_lym,0,L,V_lym)*V_lym/V_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_14_1",
+   "reaction": "null -> D1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_eff,sig_lym,L_eff,V_eff)*V_eff/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_15_1",
+   "reaction": "D1_sR2_eff -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_eff,sig_lym,L_eff,V_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_16_1",
+   "reaction": "D1_sR2_lea -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_lea,sig_lym,L_lea,V_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_19_1",
+   "reaction": "null -> D1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_lea,sig_lym,L_lea,V_lea)*V_lea/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_20_1",
+   "reaction": "null -> D1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_saf,sig_lym,L_saf,V_saf)*V_saf/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_21_1",
+   "reaction": "D1_sR2_saf -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR2_saf,sig_lym,L_saf,V_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_37_1_1_1",
+   "reaction": "D1_sR1_sR2_lym -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_lym,0,L,V_lym)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_1_1",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_tig,L_tig,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_2",
+   "reaction": "null -> D1_sR1_sR2_lea",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_lea,L_lea,V_cen)*V_cen/V_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_2_1",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_saf,L_saf,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_9_1_1",
+   "reaction": "null -> D1_sR1_sR2_tig",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_tig,L_tig,V_cen)*V_cen/V_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_10_1_1",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_lea,L_lea,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_1_1_1",
+   "reaction": "D1_sR1_sR2_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_eff,L_eff,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_2_1",
+   "reaction": "null -> D1_sR1_sR2_eff",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_eff,L_eff,V_cen)*V_cen/V_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_1_1_1",
+   "reaction": "null -> D1_sR1_sR2_saf",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_cen,sig_saf,L_saf,V_cen)*V_cen/V_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_7_1_1_1",
+   "reaction": "D1_sR1_sR2_tig -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_tig,sig_lym,L_tig,V_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_12_1_1",
+   "reaction": "null -> D1_sR1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_tig,sig_lym,L_tig,V_tig)*V_tig/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_13_1_1",
+   "reaction": "null -> D1_sR1_sR2_cen",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_lym,0,L,V_lym)*V_lym/V_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_14_1_1",
+   "reaction": "null -> D1_sR1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_eff,sig_lym,L_eff,V_eff)*V_eff/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_15_1_1",
+   "reaction": "D1_sR1_sR2_eff -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_eff,sig_lym,L_eff,V_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_16_1_1",
+   "reaction": "D1_sR1_sR2_lea -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_lea,sig_lym,L_lea,V_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_19_1_1",
+   "reaction": "null -> D1_sR1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_lea,sig_lym,L_lea,V_lea)*V_lea/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_20_1_1",
+   "reaction": "null -> D1_sR1_sR2_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_saf,sig_lym,L_saf,V_saf)*V_saf/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_21_1_1",
+   "reaction": "D1_sR1_sR2_saf -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR2_saf,sig_lym,L_saf,V_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_37_1_1_1_1",
+   "reaction": "D1_sR1_sR1_lym -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_lym,0,L,V_lym)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_1_1_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_tig,L_tig,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_2_1",
+   "reaction": "null -> D1_sR1_sR1_lea",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_lea,L_lea,V_cen)*V_cen/V_lea",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_2_1_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_saf,L_saf,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_9_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_tig",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_tig,L_tig,V_cen)*V_cen/V_tig",
+   "active": true
+  },
+  {
+   "name": "Reaction_10_1_1_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_lea,L_lea,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_1_1_2_1_1_1_1_1_1",
+   "reaction": "D1_sR1_sR1_cen -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_eff,L_eff,V_cen)",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_2_1_1",
+   "reaction": "null -> D1_sR1_sR1_eff",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_eff,L_eff,V_cen)*V_cen/V_eff",
+   "active": true
+  },
+  {
+   "name": "Reaction_11_1_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_saf",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_cen,sig_saf,L_saf,V_cen)*V_cen/V_saf",
+   "active": true
+  },
+  {
+   "name": "Reaction_7_1_1_1_1",
+   "reaction": "D1_sR1_sR1_tig -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_tig,sig_lym,L_tig,V_tig)",
+   "active": true
+  },
+  {
+   "name": "Reaction_12_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_tig,sig_lym,L_tig,V_tig)*V_tig/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_13_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_cen",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_lym,0,L,V_lym)*V_lym/V_cen",
+   "active": true
+  },
+  {
+   "name": "Reaction_14_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_eff,sig_lym,L_eff,V_eff)*V_eff/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_15_1_1_1",
+   "reaction": "D1_sR1_sR1_eff -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_eff,sig_lym,L_eff,V_eff)",
+   "active": true
+  },
+  {
+   "name": "Reaction_16_1_1_1",
+   "reaction": "D1_sR1_sR1_lea -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_lea,sig_lym,L_lea,V_lea)",
+   "active": true
+  },
+  {
+   "name": "Reaction_19_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_lea,sig_lym,L_lea,V_lea)*V_lea/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_20_1_1_1",
+   "reaction": "null -> D1_sR1_sR1_lym",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_saf,sig_lym,L_saf,V_saf)*V_saf/V_lym",
+   "active": true
+  },
+  {
+   "name": "Reaction_21_1_1_1",
+   "reaction": "D1_sR1_sR1_saf -> null",
+   "rate": "FLAG_soluble_target_trafficking_with_drug*transport_between_compartments(D1_sR1_sR1_saf,sig_lym,L_saf,V_saf)",
+   "active": true
+  },
+  {
+   "name": "Reaction_25",
+   "reaction": "D1_ext_mg -> null",
+   "rate": "rate_D1_ext_2_cen_mg_per_day",
+   "active": true
+  },
+  {
+   "name": "Reaction_26",
+   "reaction": "D1_ext_mg -> null",
+   "rate": "(1-F)*kabs*D1_ext_mg",
+   "active": true
+  },
+  {
+   "name": "Reaction_27",
+   "reaction": "null -> D1_cen",
+   "rate": "rate_D1_ext_2_cen_mg_per_day/MWab*nmol_per_mol/V_cen/BW",
+   "active": true
+  }
+ ],
+ "events": [
+  {
+   "trigger": "D1_cen_mpk > 0",
+   "functions": [
+    "dose_on_off = 1",
+    "dose_time = time",
+    "D1_cen = D1_cen+D1_cen_mpk/V_cen/MWab*nmol_per_mol"
+   ],
+   "active": true
+  },
+  {
+   "trigger": "time>dose_time",
+   "functions": [
+    "D1_cen_mpk = 0",
+    "D1_cen_mg = 0",
+    "dose_on_off = 0",
+    "dose_time = 0"
+   ],
+   "active": true
+  },
+  {
+   "trigger": "D1_cen_mg > 0",
+   "functions": [
+    "dose_on_off = 1",
+    "dose_time = time",
+    "D1_cen = D1_cen+D1_cen_mg/V_cen/BW/MWab*nmol_per_mol"
+   ],
+   "active": true
+  }
+ ],
+ "variants": [
+  {
+   "name": "1. COMPARTMENT VOLUMES: nominal",
+   "active": true,
+   "values": {
+    "V_cen": 37.14,
+    "V_tig": 115.9,
+    "V_lea": 62.4,
+    "V_eff": 10.0,
+    "V_saf": 10.0,
+    "V_lym": 37.14
+   }
+  },
+  {
+   "name": "2. DRUG TRANSPORT: nominal",
+   "active": true,
+   "values": {
+    "L": 41.4288,
+    "f_lea": 0.65,
+    "f_tig": 0.35,
+    "f_eff": 0.0,
+    "f_saf": 0.0,
+    "sig_lea": 0.7,
+    "sig_tig": 0.95,
+    "sig_lym": 0.2,
+    "sig_eff": 0.7,
+    "sig_saf": 0.7,
+    "F": 1.0,
+    "kabs": 1.0
+   }
+  },
+  {
+   "name": "3. CLEARANCE: nominal",
+   "active": true,
+   "values": {
+    "CLp": 2.8272,
+    "Vm_cl": 0.0,
+    "Km_cl": 1.0
+   }
+  },
+  {
+   "name": "4. MOLECULAR WEIGHTS: nominal",
+   "active": true,
+   "values": {
+    "MWab": 150000.0
+   }
+  },
+  {
+   "name": "5. AFFINITY: nominal",
+   "active": true,
+   "values": {
+    "kon_R1": 3.6,
+    "kon_R2": 3.6,
+    "Kd_R1": 0.01,
+    "Kd_R2": 0.01
+   }
+  },
+  {
+   "name": "6. AVIDITY: nominal",
+   "active": true,
+   "values": {
+    "avid_R1": 1.0,
+    "avid_R2": 1.0
+   }
+  },
+  {
+   "name": "7. BODY WEIGHT: nominal",
+   "active": true,
+   "values": {
+    "BW": 70.0
+   }
+  },
+  {
+   "name": "8. TARGET BURDEN: off",
+   "active": true,
+   "values": {
+    "sR1_0_cen": 0.0,
+    "sR1_0_lea": 0.0,
+    "sR1_0_tig": 0.0,
+    "sR1_0_eff": 0.0,
+    "sR1_0_saf": 0.0,
+    "sR2_0_cen": 0.0,
+    "sR2_0_lea": 0.0,
+    "sR2_0_tig": 0.0,
+    "sR2_0_eff": 0.0,
+    "sR2_0_saf": 0.0,
+    "mR1_cellspermL_cen": 1.0,
+    "rpc_mR1_cen": 0.0,
+    "mR1_cellspermL_tig": 1.0,
+    "rpc_mR1_tig": 0.0,
+    "mR1_cellspermL_lea": 1.0,
+    "rpc_mR1_lea": 0.0,
+    "mR1_cellspermL_eff": 1.0,
+    "rpc_mR1_eff": 0.0,
+    "mR1_cellspermL_saf": 1.0,
+    "rpc_mR1_saf": 0.0,
+    "mR2_cellspermL_cen": 1.0,
+    "rpc_mR2_cen": 0.0,
+    "mR2_cellspermL_tig": 1.0,
+    "rpc_mR2_tig": 0.0,
+    "mR2_cellspermL_lea": 1.0,
+    "rpc_mR2_lea": 0.0,
+    "mR2_cellspermL_eff": 1.0,
+    "rpc_mR2_eff": 0.0,
+    "mR2_cellspermL_saf": 1.0,
+    "rpc_mR2_saf": 0.0
+   }
+  },
+  {
+   "name": "10. FLAGS",
+   "active": true,
+   "values": {
+    "FLAG_BIVALENT_BINDING": 0.0,
+    "FLAG_CIS_BINDING": 0.0,
+    "FLAG_TRANS_BINDING": 0.0,
+    "FLAG_soluble_target_trafficking_with_drug": 0.0,
+    "FLAG_saturable_clearance": 0.0,
+    "FLAG_Avidity": 0.0
+   }
+  },
+  {
+   "name": "9. TARGET TURNOVER: nominal",
+   "active": true,
+   "values": {
+    "Thalf_mR1": 1.0,
+    "Thalf_mR2": 1.0,
+    "Thalf_sR1": 1.0,
+    "Thalf_sR2": 1.0,
+    "mR1_fcint": 1.0,
+    "mR2_fcint": 1.0
+   }
+  }
+ ],
+ "doses": [
+  {
+   "Name": "1 mg/kg loading dose",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 1.0,
+   "Rate": 0.0,
+   "Time": 1e-12
+  },
+  {
+   "Name": "1 mg/kg SD",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 1.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "2 mg/kg SD",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 2.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "4 mg/kg SD",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 4.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "8 mg/kg SD",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 8.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "1 mg/kg Q1W start: d21",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 1.0,
+   "Rate": 0.0,
+   "StartTime": 21.0,
+   "Interval": 7.0,
+   "RepeatCount": 9.0
+  },
+  {
+   "Name": "2 mg/kg Q1W start: d21",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 2.0,
+   "Rate": 0.0,
+   "StartTime": 21.0,
+   "Interval": 7.0,
+   "RepeatCount": 9.0
+  },
+  {
+   "Name": "4 mg/kg Q1W start: d21",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 4.0,
+   "Rate": 0.0,
+   "StartTime": 21.0,
+   "Interval": 7.0,
+   "RepeatCount": 9.0
+  },
+  {
+   "Name": "8 mg/kg Q1W start: d21",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 8.0,
+   "Rate": 0.0,
+   "StartTime": 21.0,
+   "Interval": 7.0,
+   "RepeatCount": 9.0
+  },
+  {
+   "Name": "0.3 mg/kg Q4W",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 0.3,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 28.0,
+   "RepeatCount": 8.0
+  },
+  {
+   "Name": "1 mg/kg Q4W",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 1.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 28.0,
+   "RepeatCount": 8.0
+  },
+  {
+   "Name": "3 mg/kg Q4W",
+   "TargetName": "D1_cen_mpk",
+   "Amount": 3.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 28.0,
+   "RepeatCount": 8.0
+  },
+  {
+   "Name": "300 mg IV",
+   "TargetName": "D1_cen_mg",
+   "Amount": 300.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "750 mg IV",
+   "TargetName": "D1_cen_mg",
+   "Amount": 750.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "30 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 30.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "90 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 90.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "150 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 150.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "300 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 300.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "600 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 600.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "1 mg/kg SD in nM assuming Vcen=50ml/kg/day",
+   "TargetName": "D1_cen",
+   "Amount": 133.3333,
+   "Rate": 0.0,
+   "StartTime": 0.0,
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  },
+  {
+   "Name": "15 mg SC",
+   "TargetName": "D1_ext_mg",
+   "Amount": 15.0,
+   "Rate": 0.0,
+   "StartTime": "start_time_0",
+   "Interval": 0.0,
+   "RepeatCount": 0.0
+  }
+ ]
+}
